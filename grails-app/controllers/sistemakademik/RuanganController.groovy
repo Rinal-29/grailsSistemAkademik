@@ -18,4 +18,24 @@ class RuanganController {
         ruangan.save flush:true, failOnError: true
         redirect action:"index"
     }
+
+    def edit() {
+        def ruangan = Ruangan.get(params.id)
+        def jurusan = Jurusan.list()
+        def matkul = MataKuliah.list()
+        [ruangan: ruangan, jurusan: jurusan, matkul: matkul]
+    }
+
+    def update() {
+        def ruangan = Ruangan.get(params.id)
+        ruangan.properties = params
+        ruangan.save flush:true, failOnError:true
+        redirect action: "index"
+    }
+
+    def delete() {
+        def ruangan = Ruangan.get(params.id)
+        ruangan.delete()
+        redirect action: "index"
+    }
 }
