@@ -1,0 +1,39 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: fairtech
+  Date: 10/11/20
+  Time: 16.40
+--%>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head>
+    <title>Edit Matakuliah</title>
+    <meta name="layout" content="main">
+</head>
+<body>
+    <h1 class="mb-3">Edit Data Matakuliah</h1>
+
+    <div class="card card-primary col-md-10">
+    <!-- form start -->
+        <g:form action="update" role="form" id="${matkul.id}">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Nama Matakuliah</label>
+                    <g:textField name="namaMatkul" class="form-control" value="${matkul.namaMatkul}"/>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah SKS</label>
+                    <g:textField name="sks" class="form-control" value="${matkul.sks}"/>
+                </div>
+                <div class="form-group">
+                    <label>Semester</label>
+                    <g:textField name="semester" class="form-control" value="${matkul.semester}"/>
+                </div>
+                <g:actionSubmit value="update" action="update" class="btn btn-primary" />
+            </div>
+            <!-- /.card-body -->
+        </g:form>
+</div>
+</body>
+</html>
