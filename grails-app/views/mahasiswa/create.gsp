@@ -21,6 +21,7 @@
                     <div class="form-group">
                         <label>Nim</label>
                         <g:textField name="nim" class="form-control" placeholder="Masukkan Nim"/>
+
                     </div>
                     <div class="form-group">
                         <label>Nama</label>
@@ -32,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tanggal lahir</label>
-                        <g:textField name="tanggalLahir" class="form-control" placeholder="Masukkan Tanggal Lahir"/>
+                        <input type="date" name="tanggalLahir" class="form-control"/>
                     </div>
                     <div class="form-group">
                         <label>No Telepon</label>

@@ -46,7 +46,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Matakuliah</g:link>
+                <g:link action="create" class="btn btn-primary float-right">Tambah Ruangan</g:link>
             </div>
         </div>
     </div>

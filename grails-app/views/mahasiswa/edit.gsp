@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <g:textField name="tanggalLahir" class="form-control" value="${mhs.tanggalLahir}"/>
+                    <input type="date" name="tanggalLahir" class="form-control" value="${mhs.tanggalLahir}"/>
                 </div>
                 <div class="form-group">
                     <label>No Telepon</label>

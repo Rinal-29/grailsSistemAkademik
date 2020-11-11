@@ -25,9 +25,9 @@
                 <thead>
                 <tr>
                     <th>Nip</th>
-                    <th>Dosen</th>
-                    <th>Jurusan</th>
+                    <th>Nama Dosen</th>
                     <th>Alamat</th>
+                    <th>Jurusan</th>
                     <th>Action</th>
                 </tr>
                 </thead>

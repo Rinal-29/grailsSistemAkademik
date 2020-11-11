@@ -31,7 +31,9 @@
                     <tbody>
                     <g:each in="${listJurusan}" var="jurusan">
                         <tr>
-                            <td>${jurusan.nama}</td>
+                            <td>
+                                <g:link action="detail" id="${jurusan.id}" class="btn btn-link">${jurusan.nama}</g:link>
+                            </td>
                             <td>${jurusan.fakultas}</td>
                             <td class="text-center">
                                 <g:link action="edit"  id="${jurusan.id}" class="btn btn-success">Edit</g:link>

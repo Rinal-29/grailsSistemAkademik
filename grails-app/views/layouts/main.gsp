@@ -85,6 +85,46 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="/penasehatAkademik" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Penasehat Akademik
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jadwal" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Jadwal
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/tahunAkademik" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Tahun Akademik
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/nilai" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Nilai
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/krs" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                KRS
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
