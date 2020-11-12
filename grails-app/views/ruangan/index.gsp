@@ -41,6 +41,7 @@
                     </tbody>
                 </table>
             </div>
+
             <!-- /.card-body -->
             <div class="card-footer clearfix">
                 <g:link action="create" class="btn btn-primary float-right">Tambah Ruangan</g:link>
