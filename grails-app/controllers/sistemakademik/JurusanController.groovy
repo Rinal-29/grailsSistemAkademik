@@ -11,8 +11,13 @@ class JurusanController {
 
     def save() {
         def jurusan = new Jurusan(params)
-        jurusan.save flush:true, failOnError: true
-        redirect action: "index"
+        if (jurusan.validate()) {
+            jurusan.save flush:true, failOnError: true
+            redirect action: "index"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

@@ -8,24 +8,26 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-
     <g:link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
     <g:link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400,700" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
     <asset:stylesheet src="application.css"/>
-
     <g:layoutHead/>
 </head>
 <body class="hold-transition sidebar-mini">
 
 <!-- Site wrapper -->
 <div class="wrapper">
-    `<!-- Navbar -->
+
+    <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a  href="/mahasiswa" class="nav-link">Home</a>
             </li>
         </ul>
     </nav>
@@ -86,7 +88,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/penasehatAkademik" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                            <i class= "nav-icon fas fa-address-book"></i>
                             <p>
                                 Penasehat Akademik
                             </p>
@@ -94,7 +96,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/jadwal" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                            <i class="nav-icon fas fa-clipboard-list"></i>
                             <p>
                                 Jadwal
                             </p>
@@ -102,7 +104,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/tahunAkademik" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                            <i class="nav-icon fas fa-calendar-alt"></i>
                             <p>
                                 Tahun Akademik
                             </p>
@@ -110,7 +112,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/nilai" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                            <i class="nav-icon fas fa-book-reader"></i>
                             <p>
                                 Nilai
                             </p>
@@ -118,15 +120,15 @@
                     </li>
                     <li class="nav-item">
                         <a href="/krs" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                            <i class="nav-icon fas fa-clipboard"></i>
                             <p>
                                 KRS
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
+                        <a href="/admin" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
                             <p>
                                 Akun
                             </p>
@@ -161,7 +163,8 @@
     </footer>
 </div>
 
-    <asset:javascript src="application.js"/>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<asset:javascript src="application.js"/>
 </body>
 </html>

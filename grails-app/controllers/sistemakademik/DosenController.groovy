@@ -14,8 +14,13 @@ class DosenController {
 
     def save() {
         def dosen = new Dosen(params)
-        dosen.save flush: true, failOnErorr: true
-        redirect action: "index", controller:"dosen"
+        if (dosen.validate()) {
+            dosen.save flush: true, failOnErorr: true
+            redirect action: "index", controller:"dosen"
+        } else  {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

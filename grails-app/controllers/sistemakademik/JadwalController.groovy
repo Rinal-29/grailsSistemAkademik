@@ -22,8 +22,13 @@ class JadwalController {
 
     def save() {
         def jadwal = new Jadwal(params)
-        jadwal.save flush: true, failOnError: true
-        redirect action: "index"
+        if (jadwal.validate()) {
+            jadwal.save flush: true, failOnError: true
+            redirect action: "index"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

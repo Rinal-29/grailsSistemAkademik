@@ -50,7 +50,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Mahasiswa</g:link>
+                <g:link action="create" class="btn btn-primary float-right">Tambah Nilai</g:link>
             </div>
         </div>
     </div>

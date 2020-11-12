@@ -11,14 +11,35 @@ class MahasiswaController {
     }
 
     def list () {
-        def mahasiswa = Mahasiswa.list()
-        [mahasiswa: mahasiswa]
+        def mahasiswa = Mahasiswa.list(params)
+
+        def results
+
+        if (params.kataKunci && params.cari) {
+            switch (params.kataKunci) {
+                case "nim" :
+                    results = Mahasiswa.findAllByNim(params.cari)
+                    break
+                case "nama" :
+                    results = Mahasiswa.findAllByNama(params.cari)
+                    break
+            }
+        } else {
+            results = mahasiswa
+        }
+
+        [mahasiswa: results]
     }
 
     def save () {
         def mahasiswa = new Mahasiswa(params)
-        mahasiswa.save flush:true, failOnError:true
-        redirect action: "list"
+        if (mahasiswa.validate()) {
+            mahasiswa.save flush:true, failOnError:true
+            redirect action: "list"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {
@@ -38,5 +59,8 @@ class MahasiswaController {
         def mahasiswa = Mahasiswa.get(params.id)
         mahasiswa.delete()
         redirect action: "list"
+    }
+    def table(){
+
     }
 }

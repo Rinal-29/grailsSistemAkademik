@@ -10,7 +10,7 @@ class LoginController {
             redirect action:"index", controller:"mahasiswa"
         } else  {
             redirect action:"index", controller:"login"
-            flash.message = "Invalid Username/Password, please try again."
+            flash.message = "Passwor atau Username Salah, Silahkan Ulangi lagi!"
         }
     }
 }

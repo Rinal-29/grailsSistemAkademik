@@ -28,10 +28,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <g:each in="${mahasisswa}" var="mhs">
+                    <g:each in="${mahasiswa}" var="mhs">
                         <tr>
-                            <td>${mhs.mahasiswa.nama}</td>
                             <td>${mhs.nama}</td>
+                            <td>${mhs.jurusan.nama}</td>
                         </tr>
                     </g:each>
                     </tbody>
