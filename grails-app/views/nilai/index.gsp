@@ -4,14 +4,11 @@
   Date: 11/11/20
   Time: 10.25
 --%>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Nilai</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+
     <h1 class="mb-3">Daftar Nilai</h1>
         <div class="col-md-12">
         <div class="card">
@@ -20,7 +17,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <table class="table table-bordered">
+                <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
                         <th>Nama</th>
@@ -54,5 +51,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>
