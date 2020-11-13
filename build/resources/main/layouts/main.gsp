@@ -10,10 +10,11 @@
 
     <g:link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
     <g:link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400,700" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
     <asset:stylesheet src="application.css"/>
     <g:layoutHead/>
 </head>
+
+
 <body class="hold-transition sidebar-mini">
 
 <!-- Site wrapper -->

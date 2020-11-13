@@ -4,14 +4,11 @@
   Date: 11/11/20
   Time: 10.50
 --%>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Penasehat Akademik</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+
     <h1 class="mb-3">Daftar Penasehat Akademik</h1>
     <div class="col-md-12">
     <div class="card">
@@ -20,7 +17,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <table class="table table-bordered">
+            <table id="myTable" class="table table-bordered display">
                 <thead>
                 <tr>
                     <th>Mahasiswa</th>
@@ -50,5 +47,5 @@
         </div>
     </div>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

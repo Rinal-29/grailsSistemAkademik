@@ -5,13 +5,9 @@
   Time: 13.35
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Dosen</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
 <h1 class="mb-3">Daftar Dosen</h1>
 <div class="col-md-12">
@@ -21,7 +17,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <table class="table table-bordered">
+            <table id="myTable" class="table table-bordered display">
                 <thead>
                 <tr>
                     <th>Nip</th>
@@ -53,5 +49,5 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

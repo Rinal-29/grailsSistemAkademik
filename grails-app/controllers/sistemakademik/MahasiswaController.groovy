@@ -12,23 +12,7 @@ class MahasiswaController {
 
     def list () {
         def mahasiswa = Mahasiswa.list(params)
-
-        def results
-
-        if (params.kataKunci && params.cari) {
-            switch (params.kataKunci) {
-                case "nim" :
-                    results = Mahasiswa.findAllByNim(params.cari)
-                    break
-                case "nama" :
-                    results = Mahasiswa.findAllByNama(params.cari)
-                    break
-            }
-        } else {
-            results = mahasiswa
-        }
-
-        [mahasiswa: results]
+        [mahasiswa: mahasiswa]
     }
 
     def save () {
@@ -59,8 +43,5 @@ class MahasiswaController {
         def mahasiswa = Mahasiswa.get(params.id)
         mahasiswa.delete()
         redirect action: "list"
-    }
-    def table(){
-
     }
 }

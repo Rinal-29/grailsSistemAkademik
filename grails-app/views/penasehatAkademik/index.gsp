@@ -33,8 +33,8 @@
                         <td>${pa.dosen.nama}</td>
                         <td>${pa.tahunAkademik.priode}</td>
                         <td class="text-center">
-                            <g:link action="edit"  id="${pa.id}" class="btn btn-success">Edit</g:link>
-                            <g:link action="delete" id="${pa.id}" class="btn btn-danger">Delete</g:link>
+                            <g:link action="edit"  id="${pa.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                            <g:link action="delete" id="${pa.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                         </td>
                     </tr>
                 </g:each>

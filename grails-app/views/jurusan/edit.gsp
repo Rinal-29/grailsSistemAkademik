@@ -19,11 +19,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Nama Jurusan</label>
-                    <g:textField name="nama" class="form-control" value="${jurusan.nama}"/>
+                    <input required name="nama" class="form-control" value="${jurusan.nama}"/>
                 </div>
                 <div class="form-group">
                     <label>Fakultas</label>
-                    <g:textField name="fakultas" class="form-control" value="${jurusan.fakultas}"/>
+                    <input required name="fakultas" class="form-control" value="${jurusan.fakultas}"/>
                 </div>
                 <g:actionSubmit value="update" class="btn btn-primary"/>
             </div>
