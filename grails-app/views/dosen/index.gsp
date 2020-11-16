@@ -5,13 +5,9 @@
   Time: 13.35
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Dosen</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
 <h1 class="mb-3">Daftar Dosen</h1>
 <div class="col-md-12">
@@ -21,7 +17,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <table class="table table-bordered">
+            <table id="myTable" class="table table-bordered display">
                 <thead>
                 <tr>
                     <th>Nip</th>
@@ -39,8 +35,8 @@
                         <td>${dosen.alamat}</td>
                         <td>${dosen.jurusan.nama}</td>
                         <td class="text-center">
-                            <g:link action="edit"  id="${dosen.id}" class="btn btn-success">Edit</g:link>
-                            <g:link action="delete" id="${dosen.id}" class="btn btn-danger">Delete</g:link>
+                            <g:link action="edit"  id="${dosen.id}" class="btn btn-success btn-sm"><i class="far fa-edit"></i></g:link>
+                            <g:link action="delete" id="${dosen.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                         </td>
                     </tr>
                 </g:each>
@@ -53,5 +49,5 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

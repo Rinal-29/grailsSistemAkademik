@@ -35,11 +35,11 @@
             </div>
             <div class="form-group">
                 <label>Hari</label>
-                <input type="date" name="hari" class="form-control" value="${jadwal.hari}"/>
+                <input required type="date" name="hari" class="form-control" value="${jadwal.hari}"/>
             </div>
             <div class="form-group">
                 <label>Jam</label>
-                <input type="time" name="jam" class="form-control" value="${jadwal.jam}"/>
+                <input required type="time" name="jam" class="form-control" value="${jadwal.jam}"/>
             </div>
             <div class="form-group">
                 <label>Tahun Akademik</label>

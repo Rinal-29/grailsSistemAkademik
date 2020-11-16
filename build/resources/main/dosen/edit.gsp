@@ -19,15 +19,15 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Nip</label>
-                    <g:textField name="nim" class="form-control" value="${dosen.nip}"/>
+                    <input required name="nim" class="form-control" value="${dosen.nip}"/>
                 </div>
                 <div class="form-group">
                     <label>Nama</label>
-                    <g:textField name="nama" class="form-control" value="${dosen.nama}"/>
+                    <input required name="nama" class="form-control" value="${dosen.nama}"/>
                 </div>
                 <div class="form-group">
                     <label>Alamat</label>
-                    <g:textField name="alamat" class="form-control" value="${dosen.alamat}"/>
+                    <input required name="alamat" class="form-control" value="${dosen.alamat}"/>
                 </div>
                 <div class="form-group">
                     <label>Jurusan</label>

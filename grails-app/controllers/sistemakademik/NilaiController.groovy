@@ -14,8 +14,13 @@ class NilaiController {
 
     def save() {
         def nilai = new Nilai(params)
-        nilai.save flush:true, failOnError: true
-        redirect action: "index"
+        if (nilai.validate()) {
+            nilai.save flush:true, failOnError: true
+            redirect action: "index"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

@@ -11,8 +11,13 @@ class MatakuliahController {
 
     def save() {
         def matkul = new MataKuliah(params)
-        matkul.save flush: true, failOnError: true
-        redirect action:"index"
+        if (matkul.validate()) {
+            matkul.save flush: true, failOnError: true
+            redirect action:"index"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

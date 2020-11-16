@@ -14,29 +14,38 @@
 <body>
     <h1 class="mb-3">Edit Data Mahasiswa</h1>
 
+    <g:if test="${flash.message}">
+        <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
+            <div class="message">${flash.message}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </g:if>
+
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="update" role="form" id="${mhs.id}">
             <div class="card-body">
                 <div class="form-group">
                     <label>Nim</label>
-                    <g:textField name="nim" class="form-control" value="${mhs.nim}"/>
+                    <input required name="nim" class="form-control" value="${mhs.nim}"/>
                 </div>
                 <div class="form-group">
                     <label>Nama</label>
-                    <g:textField name="nama" class="form-control" value="${mhs.nama}"/>
+                    <input required name="nama" class="form-control" value="${mhs.nama}"/>
                 </div>
                 <div class="form-group">
                     <label>Alamat</label>
-                    <g:textField name="alamat" class="form-control" value="${mhs.alamat}"/>
+                    <input required name="alamat" class="form-control" value="${mhs.alamat}"/>
                 </div>
                 <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <input type="date" name="tanggalLahir" class="form-control" value="${mhs.tanggalLahir}"/>
+                    <input required type="date" name="tanggalLahir" class="form-control" value="${mhs.tanggalLahir}"/>
                 </div>
                 <div class="form-group">
                     <label>No Telepon</label>
-                    <g:textField name="noTelp" class="form-control" value="${mhs.noTelp}"/>
+                    <input required name="noTelp" class="form-control" value="${mhs.noTelp}"/>
                 </div>
                 <div class="form-group">
                     <label>Jurusan</label>

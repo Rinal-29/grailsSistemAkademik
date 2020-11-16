@@ -19,11 +19,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Nama</label>
-                    <g:textField name="nama" class="form-control" value="${nilaiMhs.nama}"/>
+                    <input required name="nama" class="form-control" value="${nilaiMhs.nama}"/>
                 </div>
                 <div class="form-group">
                     <label>Nim</label>
-                    <g:textField name="nim" class="form-control" value="${nilaiMhs.nim}"/>
+                    <input required name="nim" class="form-control" value="${nilaiMhs.nim}"/>
                 </div>
                 <div class="form-group">
                     <label>Matakuliah</label>
@@ -35,11 +35,11 @@
                 </div>
                 <div class="form-group">
                     <label>Nilai UTS</label>
-                    <g:textField name="uts" class="form-control" value="${nilaiMhs.uts}"/>
+                    <input required name="uts" class="form-control" value="${nilaiMhs.uts}"/>
                 </div>
                 <div class="form-group">
                     <label>Nilai UAS</label>
-                    <g:textField name="uas" class="form-control" value="${nilaiMhs.uas}"/>
+                    <input required name="uas" class="form-control" value="${nilaiMhs.uas}"/>
                 </div>
                 <g:actionSubmit value="update" class="btn btn-primary"/>
             </div>

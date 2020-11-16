@@ -20,15 +20,15 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Nama Matakuliah</label>
-                    <g:textField name="namaMatkul" class="form-control" value="${matkul.namaMatkul}"/>
+                    <input required name="namaMatkul" class="form-control" value="${matkul.namaMatkul}"/>
                 </div>
                 <div class="form-group">
                     <label>Jumlah SKS</label>
-                    <g:textField name="sks" class="form-control" value="${matkul.sks}"/>
+                    <input required name="sks" class="form-control" value="${matkul.sks}"/>
                 </div>
                 <div class="form-group">
                     <label>Semester</label>
-                    <g:textField name="semester" class="form-control" value="${matkul.semester}"/>
+                    <input required name="semester" class="form-control" value="${matkul.semester}"/>
                 </div>
                 <g:actionSubmit value="update" action="update" class="btn btn-primary" />
             </div>

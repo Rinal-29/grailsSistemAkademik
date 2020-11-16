@@ -11,14 +11,19 @@ class MahasiswaController {
     }
 
     def list () {
-        def mahasiswa = Mahasiswa.list()
+        def mahasiswa = Mahasiswa.list(params)
         [mahasiswa: mahasiswa]
     }
 
     def save () {
         def mahasiswa = new Mahasiswa(params)
-        mahasiswa.save flush:true, failOnError:true
-        redirect action: "list"
+        if (mahasiswa.validate()) {
+            mahasiswa.save flush:true, failOnError:true
+            redirect action: "list"
+        } else {
+            flash.message = "Masukkan semua data dengan benar"
+            redirect action: "create"
+        }
     }
 
     def edit() {

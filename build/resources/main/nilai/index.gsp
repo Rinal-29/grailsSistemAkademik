@@ -4,14 +4,11 @@
   Date: 11/11/20
   Time: 10.25
 --%>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Nilai</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+
     <h1 class="mb-3">Daftar Nilai</h1>
         <div class="col-md-12">
         <div class="card">
@@ -20,7 +17,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <table class="table table-bordered">
+                <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
                         <th>Nama</th>
@@ -40,8 +37,8 @@
                             <td>${nilaiMhs.uts}</td>
                             <td>${nilaiMhs.uas}</td>
                             <td class="text-center">
-                                <g:link action="edit"  id="${nilaiMhs.id}" class="btn btn-success">Edit</g:link>
-                                <g:link action="delete" id="${nilaiMhs.id}" class="btn btn-danger">Delete</g:link>
+                                <g:link action="edit"  id="${nilaiMhs.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                <g:link action="delete" id="${nilaiMhs.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>
@@ -50,9 +47,9 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Mahasiswa</g:link>
+                <g:link action="create" class="btn btn-primary float-right">Tambah Nilai</g:link>
             </div>
         </div>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

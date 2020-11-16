@@ -13,7 +13,6 @@
     <asset:stylesheet src="application.css"/>
 </head>
 
-<body>
 <body class="hold-transition login-pagehold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
@@ -64,8 +63,16 @@
     </div>
 </div>
 
+<g:if test="${flash.message}">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="message">${flash.message}</div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</g:if>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <asset:javascript src="application.js"/>
-</body>
 </body>
 </html>

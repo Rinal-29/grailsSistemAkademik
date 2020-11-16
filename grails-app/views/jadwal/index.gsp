@@ -4,14 +4,10 @@
   Date: 11/11/20
   Time: 11.30
 --%>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Jadwal</title>
-    <meta name="layout" content="main">
-</head>
-<body>
     <h1 class="mb-3">Daftar Jadwal</h1>
     <div class="col-md-12">
         <div class="card">
@@ -20,7 +16,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <table class="table table-bordered">
+                <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
                         <th>Dosen</th>
@@ -42,8 +38,8 @@
                             <td>${jadwal.tahunAkademik.priode}</td>
                             <td>${jadwal.ruangan.namaRuangan}</td>
                             <td class="text-center">
-                                <g:link action="edit"  id="${jadwal.id}" class="btn btn-success">Edit</g:link>
-                                <g:link action="delete" id="${jadwal.id}" class="btn btn-danger">Delete</g:link>
+                                <g:link action="edit"  id="${jadwal.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                <g:link action="delete" id="${jadwal.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>
@@ -56,5 +52,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

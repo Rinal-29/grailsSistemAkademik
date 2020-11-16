@@ -5,13 +5,10 @@
   Time: 17.13
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Daftar Ruangan</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
+
     <h1 class="mb-3">Daftar Ruangan</h1>
     <div class="col-md-12">
         <div class="card">
@@ -20,7 +17,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <table class="table table-bordered">
+                <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
                         <th>Nama Ruangan</th>
@@ -36,19 +33,20 @@
                             <td>${ruang.mataKuliah.namaMatkul}</td>
                             <td>${ruang.jurusan.nama}</td>
                             <td class="text-center">
-                                <g:link action="edit" id="${ruang.id}" class="btn btn-success">Edit</g:link>
-                                <g:link action="delete" id="${ruang.id}" class="btn btn-danger">Delete</g:link>
+                                <g:link action="edit" id="${ruang.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                <g:link action="delete" id="${ruang.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
+
             <!-- /.card-body -->
             <div class="card-footer clearfix">
                 <g:link action="create" class="btn btn-primary float-right">Tambah Ruangan</g:link>
             </div>
         </div>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>
