@@ -23,7 +23,9 @@
                         <th>Nama Ruangan</th>
                         <th>Matakuliah</th>
                         <th>Jurusan</th>
-                        <th>Action</th>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
+                            <th>Action</th>
+                        </sec:ifAllGranted>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,10 +34,12 @@
                             <td>${ruang.namaRuangan}</td>
                             <td>${ruang.mataKuliah.namaMatkul}</td>
                             <td>${ruang.jurusan.nama}</td>
-                            <td class="text-center">
-                                <g:link action="edit" id="${ruang.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${ruang.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
-                            </td>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+                                <td class="text-center">
+                                    <g:link action="edit" id="${ruang.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                    <g:link action="delete" id="${ruang.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                </td>
+                            </sec:ifAllGranted>
                         </tr>
                     </g:each>
                     </tbody>
@@ -43,9 +47,11 @@
             </div>
 
             <!-- /.card-body -->
-            <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Ruangan</g:link>
-            </div>
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+                <div class="card-footer clearfix">
+                    <g:link action="create" class="btn btn-primary float-right">Tambah Ruangan</g:link>
+                </div>
+            </sec:ifAllGranted>
         </div>
     </div>
 

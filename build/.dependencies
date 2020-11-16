@@ -7,6 +7,7 @@ dependencies:
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-boot/3.1.3/83234391c6075672aee277d005776804386d6887/grails-web-boot-3.1.3.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.2/519bc1bffb2afa10c93b92e872d49a5238e96558/cache-3.0.2.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/scaffolding/3.2.1/82b56d19aff8da7818a17e723c8a49f7499caf26/scaffolding-3.2.1.jar
+- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/spring-security-core/3.1.2/ca54acbad681d79bd545373db6dac234a637009f/spring-security-core-3.1.2.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate4/5.0.2/3966f58f6edf39bce6b35ac5e1de67f39f614e7e/hibernate4-5.0.2.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-ehcache/4.3.11.Final/cea0e6aba102c00cf899bd547c338fcf54468433/hibernate-ehcache-4.3.11.Final.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/asset-pipeline/3.0.15/2076efba1e7c0f38b60dcb6dd096f83857ada431/asset-pipeline-3.0.15.jar
@@ -49,6 +50,9 @@ dependencies:
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-common/3.1.3/1f2561da1607f114039ec1c6961ccde7fa49b3c0/grails-web-common-3.1.3.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.1-GA/d9a09f7732226af26bf99f19e2cffe0ae219db5b/javassist-3.18.1-GA.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails.plugins/fields/2.1.2/45019a9e6ad24418ad4c92b948b018ea613293e/fields-2.1.2.jar
+- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/net.sf.ehcache/ehcache/2.10.1/a507a1302b631d0718fe29ae95d4e52e646ecc5a/ehcache-2.10.1.jar
+- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.0.3.RELEASE/9f420c5742ad063970c5d33f60680a1cee777aa5/spring-security-core-4.0.3.RELEASE.jar
+- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.0.3.RELEASE/5f0233d94ca53ac8710780b43791f633f970480a/spring-security-web-4.0.3.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-simple/5.0.2.RELEASE/88d65abb8451d1f78b747cdf8a164f36bd1c3c46/grails-datastore-simple-5.0.2.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/5.0.2.RELEASE/1df45cfd2f8ee466878fed668937a6973f7a14de/grails-datastore-gorm-support-5.0.2.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-hibernate4/5.0.2.RELEASE/d017bace14c75f50e722bdcb5a3b44a463065816/grails-datastore-gorm-hibernate4-5.0.2.RELEASE.jar
@@ -105,6 +109,7 @@ dependencies:
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.4.RELEASE/cf4317be9c83b4c1c65ce2d3bb96673ac546030a/spring-webmvc-4.2.4.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/4.2.4.RELEASE/428f5d6ab3eba5ddd0b89474379ccfe867a42cc1/spring-context-support-4.2.4.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar
+- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-core/5.0.2.RELEASE/743fb05badfa566e957e84ab96f1944574633ebc/grails-datastore-core-5.0.2.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm/5.0.2.RELEASE/9d307c7b0bd774697cf3fed8e2cb92f26d21f905/grails-datastore-gorm-5.0.2.RELEASE.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar
@@ -137,7 +142,6 @@ dependencies:
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.2.15.v20160210/ccd245541cc63311bdcfe551525bd7d82ea5e92c/jetty-util-9.2.15.v20160210.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.2.15.v20160210/5a3af41803c12b0f3628ed8927a8cedb42972169/jetty-io-9.2.15.v20160210.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.2.15.v20160210/ee5616ec65d6c8f05fe16ee4dbb6723b2ebff470/websocket-common-9.2.15.v20160210.jar
-- file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.4/6d473e8653d952045f550f4ef225a9591b79094a/ant-1.9.4.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovydoc/2.4.6/8ff8fae45749021dd10d2cb3a5c5662a6c277881/groovy-groovydoc-2.4.6.jar
 - file:/Users/fairtech/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-antlr/1.9.4/4cf30025981dc2344324a0ef0e40063c3ef08f0a/ant-antlr-1.9.4.jar

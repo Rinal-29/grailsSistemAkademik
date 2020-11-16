@@ -13,8 +13,10 @@
 </head>
 
 <body>
-    <h1 class="mb-5">Dashboard</h1>
-
+    <h1 class="mb-2">Dashboard</h1>
+    <sec:ifLoggedIn>
+        <h4 class="mb-5">Selamat Datang, <sec:username/></h4>
+    </sec:ifLoggedIn>
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small card -->
@@ -138,22 +140,24 @@
             </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info">
-                <div class="inner">
-                    <p>Tahun Akademik</p>
+        <sec:ifAllGranted roles="ROLE_ADMIN">
+            <div class="col-lg-3 col-6">
+                <!-- small card -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <p>Tahun Akademik</p>
 
-                    <h3>${ta}</h3>
+                        <h3>${ta}</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                    </div>
+                    <a href="/tahunAkademik" class="small-box-footer">
+                        Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-                <div class="icon">
-                    <i class="nav-icon fas fa-calendar-alt"></i>
-                </div>
-                <a href="/tahunAkademik" class="small-box-footer">
-                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
-                </a>
             </div>
-        </div>
+        </sec:ifAllGranted>
         <div class="col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info">

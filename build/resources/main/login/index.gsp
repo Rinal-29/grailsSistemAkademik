@@ -24,9 +24,9 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Masuk dengan akun anda</p>
-            <g:form action="account" method="post" controller="login">
+            <g:form action="authenticate" method="post" controller="login">
                 <div class="input-group mb-3">
-                    <g:textField name="email" type="email" class="form-control" placeholder="Email"/>
+                    <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="social-auth-links text-center mb-3">
-                    <g:actionSubmit value="Masuk" action="account" class="btn btn-block btn-primary mb-3"/>
+                    <g:actionSubmit value="${message(code: 'springSecurity.login.button')}" action="dashboard" class="btn btn-block btn-primary mb-3"/>
                     <p>- Atau -</p>
                     <a href="../register/index" class="btn btn-block btn-danger">
                         Daftar!

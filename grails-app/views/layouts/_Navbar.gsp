@@ -28,9 +28,11 @@
                         <i class="nav-icon fas fa-user"></i> Akun
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a href="/login" class="dropdown-item bg-red">
-                        <i class="fas fa-sign-out-alt"></i> LogOut
-                    </a>
+                    <sec:ifLoggedIn>
+                        <g:link controller="logout" class="dropdown-item bg-red">
+                            <i class="fas fa-sign-out-alt"></i> LogOut
+                        </g:link>
+                    </sec:ifLoggedIn>
                     <div class="dropdown-divider"></div>
                     <a href="/dashboard" class="dropdown-item dropdown-footer">Lihat Semua</a>
                 </div>

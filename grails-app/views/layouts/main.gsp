@@ -46,9 +46,11 @@
                 <i class="nav-icon fas fa-user"></i> Akun
             </a>
             <div class="dropdown-divider"></div>
-            <a href="/login" class="dropdown-item bg-red">
-                <i class="fas fa-sign-out-alt"></i> LogOut
-            </a>
+            <sec:ifLoggedIn>
+                <g:link controller="logout" class="dropdown-item bg-red">
+                    <i class="fas fa-sign-out-alt"></i> LogOut
+                </g:link>
+            </sec:ifLoggedIn>
             <div class="dropdown-divider"></div>
             <a href="/dashboard" class="dropdown-item dropdown-footer">Lihat Semua</a>
         </div>
@@ -61,12 +63,12 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="" class="brand-link text-center">
-            <span class="brand-text font-weight-light">AdminLTE</span>
+            <span class="brand-text font-weight-light">Sistem Akademik</span>
         </a>
         <!-- Sidebar -->
         <div class="sidebar">
             <!-- Sidebar Menu -->
-            <nav class="mt-2">
+            <nav class="mt-2" id="myTab">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -135,14 +137,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/tahunAkademik" class="nav-link">
-                            <i class="nav-icon fas fa-calendar-alt"></i>
-                            <p>
-                                Tahun Akademik
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="/nilai" class="nav-link">
                             <i class="nav-icon fas fa-book-reader"></i>
                             <p>
@@ -158,14 +152,24 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/admin" class="nav-link">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>
-                                Akun
-                            </p>
-                        </a>
-                    </li>
+                    <sec:ifAllGranted roles="ROLE_ADMIN">
+                        <li class="nav-item">
+                            <a href="/tahunAkademik" class="nav-link">
+                                <i class="nav-icon fas fa-calendar-alt"></i>
+                                <p>
+                                    Tahun Akademik
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/user" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Akun
+                                </p>
+                            </a>
+                        </li>
+                    </sec:ifAllGranted>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

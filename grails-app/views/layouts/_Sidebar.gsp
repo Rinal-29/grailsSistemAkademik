@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link text-center">
-        <span class="brand-text font-weight-light">AdminLTE</span>
+        <span class="brand-text font-weight-light">Sistem Akademik</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -76,14 +76,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/tahunAkademik" class="nav-link">
-                        <i class="nav-icon fas fa-calendar-alt"></i>
-                        <p>
-                            Tahun Akademik
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="/nilai" class="nav-link">
                         <i class="nav-icon fas fa-book-reader"></i>
                         <p>
@@ -99,14 +91,24 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Akun
-                        </p>
-                    </a>
-                </li>
+                <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <li class="nav-item">
+                        <a href="/tahunAkademik" class="nav-link">
+                            <i class="nav-icon fas fa-calendar-alt"></i>
+                            <p>
+                                Tahun Akademik
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/user" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                Akun
+                            </p>
+                        </a>
+                    </li>
+                </sec:ifAllGranted>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
