@@ -40,8 +40,8 @@
                             <td>${mhs.noTelp}</td>
                             <td>${mhs.jurusan.nama}</td>
                             <td class="text-center">
-                                <g:link action="edit"  id="${mhs.id}" class="btn btn-success">Edit</g:link>
-                                <g:link action="delete" id="${mhs.id}" class="btn btn-danger">Delete</g:link>
+                                <g:link action="edit"  id="${mhs.id}" class="btn btn-success btn-sm"><i class="far fa-edit"></i></g:link>
+                                <g:link action="delete" id="${mhs.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>

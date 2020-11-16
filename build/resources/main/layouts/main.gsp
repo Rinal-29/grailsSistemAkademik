@@ -28,9 +28,32 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a  href="/mahasiswa" class="nav-link">Home</a>
+                <a  href="/dashboard" class="nav-link">Home</a>
             </li>
         </ul>
+
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="nav-icon fas fa-users"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">Menu</span>
+            <div class="dropdown-divider"></div>
+            <a href="/admin" class="dropdown-item">
+                <i class="nav-icon fas fa-user"></i> Akun
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="/login" class="dropdown-item bg-red">
+                <i class="fas fa-sign-out-alt"></i> LogOut
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="/dashboard" class="dropdown-item dropdown-footer">Lihat Semua</a>
+        </div>
+        </li>
+    </ul>
     </nav>
     <!-- /.navbar -->
 
@@ -47,6 +70,14 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <a href="/dashboard/index" class="nav-link">
+                            <i class="nav-icon fas fa-columns"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="/mahasiswa/index" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>

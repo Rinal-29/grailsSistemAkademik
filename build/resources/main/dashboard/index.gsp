@@ -13,6 +13,180 @@
 </head>
 
 <body>
-    <h1>Dashboard</h1>
+    <h1 class="mb-5">Dashboard</h1>
+
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <p>Mahasiswa</p>
+
+                    <h3>${mahasiswa}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-users"></i>
+                </div>
+                <a href="/mahasiswa" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <p>Dosen</p>
+
+                    <h3>${dosen}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                </div>
+                <a href="/dosen" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <p>MataKuliah</p>
+
+                    <h3>${matkul}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-book-open"></i>
+                </div>
+                <a href="/matakuliah" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <p>Ruangan</p>
+
+                    <h3>${ruangan}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-school"></i>
+                </div>
+                <a href="/ruangan" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <p>Jurusan</p>
+
+                    <h3>${jurusan}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-university"></i>
+                </div>
+                <a href="/jurusan" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <p>Penasehat Akademik</p>
+
+                    <h3>${penasehat}</h3>
+                </div>
+                <div class="icon">
+                    <i class= "nav-icon fas fa-address-book"></i>
+                </div>
+                <a href="/penasehatAkademik" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <p>Jadwal</p>
+
+                    <h3>${jadwal}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-clipboard-list"></i>
+                </div>
+                <a href="/jadwal" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <p>Tahun Akademik</p>
+
+                    <h3>${ta}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-calendar-alt"></i>
+                </div>
+                <a href="/tahunAkademik" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <p>Nilai</p>
+
+                    <h3>${nilai}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-book-reader"></i>
+                </div>
+                <a href="/nilai" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <p>KRS</p>
+
+                    <h3>${krs}</h3>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-clipboard"></i>
+                </div>
+                <a href="/krs" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
