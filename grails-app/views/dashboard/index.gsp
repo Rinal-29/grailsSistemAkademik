@@ -13,16 +13,16 @@
 </head>
 
 <body>
-    <h1 class="mb-2">Dashboard</h1>
+    <h1 class="mb-2"><g:message code="header.dashboard.name"/> </h1>
     <sec:ifLoggedIn>
-        <h4 class="mb-5">Selamat Datang, <sec:username/></h4>
+        <h5 class="mb-5"><g:message code="header.welcome.name"/>, <sec:username/></h5>
     </sec:ifLoggedIn>
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <p>Mahasiswa</p>
+                    <p><g:message code="sidebar.student.name"/> </p>
 
                     <h3>${mahasiswa}</h3>
                 </div>
@@ -39,7 +39,7 @@
             <!-- small card -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <p>Dosen</p>
+                    <p><g:message code="sidebar.lecture.name"/> </p>
 
                     <h3>${dosen}</h3>
                 </div>

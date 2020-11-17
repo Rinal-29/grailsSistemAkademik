@@ -11,12 +11,33 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a  href="/dashboard/index" class="nav-link">Home</a>
+                <a  href="/dashboard" class="nav-link">
+                    <i class="nav-icon fas fa-home"></i>
+                    <g:message code="navbar.home.name"/>
+                </a>
             </li>
         </ul>
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="nav-icon fas fa-language fa-lg"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-item dropdown-header"><g:message code="navbar.language.list"/></span>
+                    <div class="dropdown-divider"></div>
+                    <g:link class="dropdown-item" mapping="languageId">
+                        Indonesia
+                    </g:link>
+                    <div class="dropdown-divider"></div>
+                    <g:link mapping="languageEn" class="dropdown-item">
+                        English
+                    </g:link>
+                </div>
+            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="nav-icon fas fa-users"></i>

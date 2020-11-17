@@ -4,6 +4,5 @@ $(document).ready( function () {
 
 
 $("#myTab a").on("click", function (){
-    e.preventDefault()
     $(this).addClass("active");
 })

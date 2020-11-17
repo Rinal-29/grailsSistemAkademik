@@ -13,14 +13,16 @@
 </head>
 
 <body>
-    <h1 class="mb-5">Dashboard</h1>
-
+    <h1 class="mb-2"><g:message code="header.dashboard.name"/> </h1>
+    <sec:ifLoggedIn>
+        <h5 class="mb-5"><g:message code="header.welcome.name"/>, <sec:username/></h5>
+    </sec:ifLoggedIn>
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <p>Mahasiswa</p>
+                    <p><g:message code="sidebar.student.name"/> </p>
 
                     <h3>${mahasiswa}</h3>
                 </div>
@@ -37,7 +39,7 @@
             <!-- small card -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <p>Dosen</p>
+                    <p><g:message code="sidebar.lecture.name"/> </p>
 
                     <h3>${dosen}</h3>
                 </div>
@@ -138,22 +140,24 @@
             </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info">
-                <div class="inner">
-                    <p>Tahun Akademik</p>
+        <sec:ifAllGranted roles="ROLE_ADMIN">
+            <div class="col-lg-3 col-6">
+                <!-- small card -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <p>Tahun Akademik</p>
 
-                    <h3>${ta}</h3>
+                        <h3>${ta}</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                    </div>
+                    <a href="/tahunAkademik" class="small-box-footer">
+                        Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                    </a>
                 </div>
-                <div class="icon">
-                    <i class="nav-icon fas fa-calendar-alt"></i>
-                </div>
-                <a href="/tahunAkademik" class="small-box-footer">
-                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
-                </a>
             </div>
-        </div>
+        </sec:ifAllGranted>
         <div class="col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info">

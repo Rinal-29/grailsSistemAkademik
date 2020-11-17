@@ -44,7 +44,7 @@
                 <div class="social-auth-links text-center mb-3">
                     <g:actionSubmit value="${message(code: 'springSecurity.login.button')}" action="dashboard" class="btn btn-block btn-primary mb-3"/>
                     <p>- Atau -</p>
-                    <a href="../register/index" class="btn btn-block btn-danger">
+                    <a href="/user/create" class="btn btn-block btn-danger">
                         Daftar!
                     </a>
                 </div>
@@ -57,7 +57,7 @@
 
 <g:if test="${flash.message}">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <div class="message">${flash.message}</div>
+        <div class="message"><g:message code="login.error.message"/></div>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

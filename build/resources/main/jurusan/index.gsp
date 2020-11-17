@@ -21,7 +21,9 @@
                     <tr>
                         <th>Nama</th>
                         <th>Fakultas</th>
-                        <th>Action</th>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
+                            <th>Action</th>
+                        </sec:ifAllGranted>
                     </tr>
                     </thead>
                     <tbody>
@@ -31,19 +33,23 @@
                                 <g:link action="detail" id="${jurusan.id}" class="btn btn-link">${jurusan.nama}</g:link>
                             </td>
                             <td>${jurusan.fakultas}</td>
-                            <td class="text-center">
-                                <g:link action="edit"  id="${jurusan.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${jurusan.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
-                            </td>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+                                <td class="text-center">
+                                    <g:link action="edit"  id="${jurusan.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                    <g:link action="delete" id="${jurusan.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                </td>
+                            </sec:ifAllGranted>
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
             <!-- /.card-body -->
-            <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Jurusan</g:link>
-            </div>
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+                <div class="card-footer clearfix">
+                    <g:link action="create" class="btn btn-primary float-right">Tambah Jurusan</g:link>
+                </div>
+            </sec:ifAllGranted>
         </div>
     </div>
 

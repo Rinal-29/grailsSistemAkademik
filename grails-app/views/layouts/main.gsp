@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html class="no-js">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -28,7 +28,10 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a  href="/dashboard" class="nav-link">Home</a>
+                <a  href="/dashboard" class="nav-link">
+                    <i class="nav-icon fas fa-home"></i>
+                    <g:message code="navbar.home.name"/>
+                </a>
             </li>
         </ul>
 
@@ -36,24 +39,43 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="nav-icon fas fa-users"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">Menu</span>
-            <div class="dropdown-divider"></div>
-            <a href="/admin" class="dropdown-item">
-                <i class="nav-icon fas fa-user"></i> Akun
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="nav-icon fas fa-language fa-lg"></i>
             </a>
-            <div class="dropdown-divider"></div>
-            <sec:ifLoggedIn>
-                <g:link controller="logout" class="dropdown-item bg-red">
-                    <i class="fas fa-sign-out-alt"></i> LogOut
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-item dropdown-header"><g:message code="navbar.language.list"/></span>
+                <div class="dropdown-divider"></div>
+                <g:link class="dropdown-item" mapping="languageId">
+                    Indonesia
                 </g:link>
-            </sec:ifLoggedIn>
-            <div class="dropdown-divider"></div>
-            <a href="/dashboard" class="dropdown-item dropdown-footer">Lihat Semua</a>
-        </div>
+                <div class="dropdown-divider"></div>
+                <g:link mapping="languageEn" class="dropdown-item">
+                    English
+                </g:link>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="nav-icon fas fa-list"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-item dropdown-header">Menu</span>
+                <div class="dropdown-divider"></div>
+                <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <a href="/admin" class="dropdown-item">
+                        <i class="nav-icon fas fa-user"></i> <g:message code="sidebar.account.name"/>
+                    </a>
+                </sec:ifAllGranted>
+                <div class="dropdown-divider"></div>
+                <sec:ifLoggedIn>
+                    <g:link controller="logout" class="dropdown-item bg-red">
+                        <i class="fas fa-sign-out-alt"></i> LogOut
+                    </g:link>
+                </sec:ifLoggedIn>
+                <div class="dropdown-divider"></div>
+                <a href="/dashboard" class="dropdown-item dropdown-footer">Lihat Semua</a>
+            </div>
         </li>
     </ul>
     </nav>
@@ -63,7 +85,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="" class="brand-link text-center">
-            <span class="brand-text font-weight-light">Sistem Akademik</span>
+            <span class="brand-text font-weight-light"><g:message code="navbar.brand.name"/> </span>
         </a>
         <!-- Sidebar -->
         <div class="sidebar">
@@ -76,7 +98,7 @@
                         <a href="/dashboard/index" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>
-                                Dashboard
+                                <g:message code="sidebar.dashboard.name"/>
                             </p>
                         </a>
                     </li>
@@ -84,7 +106,7 @@
                         <a href="/mahasiswa/index" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
-                                Mahasiswa
+                                <g:message code="sidebar.student.name"/>
                             </p>
                         </a>
                     </li>
@@ -92,7 +114,7 @@
                         <a href="/dosen" class="nav-link">
                             <i class="nav-icon fas fa-chalkboard-teacher"></i>
                             <p>
-                                Dosen
+                                <g:message code="sidebar.lecture.name"/>
                             </p>
                         </a>
                     </li>
@@ -100,7 +122,7 @@
                         <a href="/matakuliah" class="nav-link">
                             <i class="nav-icon fas fa-book-open"></i>
                             <p>
-                                Mata Kuliah
+                                <g:message code="sidebar.courses.name"/>
                             </p>
                         </a>
                     </li>
@@ -108,7 +130,7 @@
                         <a href="/ruangan" class="nav-link">
                             <i class="nav-icon fas fa-school"></i>
                             <p>
-                                Ruangan
+                                <g:message code="sidebar.room.name"/>
                             </p>
                         </a>
                     </li>
@@ -116,7 +138,7 @@
                         <a href="/jurusan" class="nav-link">
                             <i class="nav-icon fas fa-university"></i>
                             <p>
-                                Jurusan
+                                <g:message code="sidebar.major.name"/>
                             </p>
                         </a>
                     </li>
@@ -124,7 +146,7 @@
                         <a href="/penasehatAkademik" class="nav-link">
                             <i class= "nav-icon fas fa-address-book"></i>
                             <p>
-                                Penasehat Akademik
+                                <g:message code="sidebar.academic.name"/>
                             </p>
                         </a>
                     </li>
@@ -132,7 +154,7 @@
                         <a href="/jadwal" class="nav-link">
                             <i class="nav-icon fas fa-clipboard-list"></i>
                             <p>
-                                Jadwal
+                                <g:message code="sidebar.schedule.name"/>
                             </p>
                         </a>
                     </li>
@@ -140,7 +162,7 @@
                         <a href="/nilai" class="nav-link">
                             <i class="nav-icon fas fa-book-reader"></i>
                             <p>
-                                Nilai
+                                <g:message code="sidebar.score.name"/>
                             </p>
                         </a>
                     </li>
@@ -148,7 +170,7 @@
                         <a href="/krs" class="nav-link">
                             <i class="nav-icon fas fa-clipboard"></i>
                             <p>
-                                KRS
+                                <g:message code="sidebar.krs.name"/>
                             </p>
                         </a>
                     </li>
@@ -157,7 +179,7 @@
                             <a href="/tahunAkademik" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
-                                    Tahun Akademik
+                                    <g:message code="sidebar.year.name"/>
                                 </p>
                             </a>
                         </li>
@@ -165,7 +187,7 @@
                             <a href="/user" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
-                                    Akun
+                                    <g:message code="sidebar.account.name"/>
                                 </p>
                             </a>
                         </li>
