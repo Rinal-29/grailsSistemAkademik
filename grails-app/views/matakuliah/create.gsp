@@ -27,17 +27,17 @@
         <div class="card-body">
             <div class="form-group">
                 <label><g:message code="table.filed.courses"/> </label>
-                <g:textField name="namaMatkul" class="form-control" placeholder="Masukkan Nama Matakuliah"/>
+                <g:textField name="namaMatkul" class="form-control" placeholder="${message(code: "placeholder.courses")}"/>
             </div>
             <div class="form-group">
                 <label>SKS</label>
-                <g:textField name="sks" class="form-control" placeholder="Masukkan jumlah sks"/>
+                <g:textField name="sks" class="form-control" placeholder="${message(code: "placeholder.sks")}"/>
             </div>
             <div class="form-group">
                 <label>Semester</label>
-                <g:textField name="semester" class="form-control" placeholder="Masukkan Semester"/>
+                <g:textField name="semester" class="form-control" placeholder="${message(code: "placeholder.semester")}"/>
             </div>
-            <g:actionSubmit value="Tambah Matakuliah" action="save" class="btn btn-primary"/>
+            <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
         </div>
         <!-- /.card-body -->
     </g:form>

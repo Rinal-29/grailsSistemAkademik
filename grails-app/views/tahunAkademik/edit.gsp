@@ -28,7 +28,7 @@
                         <option value="2024">2024</option>
                     </select>
                 </div>
-                <g:actionSubmit value="update" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.update")}" action="update" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>

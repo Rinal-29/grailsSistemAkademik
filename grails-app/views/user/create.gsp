@@ -24,17 +24,17 @@
         <div class="card-body">
             <div class="form-group">
                 <label>Username</label>
-                <g:textField name="=username" class="form-control" placeholder="Masukkan Username"/>
+                <g:textField name="=username" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <g:passwordField name="password" class="form-control" placeholder="Masukkan Password"/>
+                <g:passwordField name="password" class="form-control" placeholder="${message(code: "placeholder.password")}"/>
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <g:textField name="email" class="form-control" placeholder="Masukkan Email"/>
+                <g:textField name="email" class="form-control" placeholder="${message(code: "placeholder.email")}"/>
             </div>
-            <g:actionSubmit value="save" class="btn btn-primary"/>
+            <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
         </div>
         <!-- /.card-body -->
     </g:form>

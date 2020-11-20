@@ -27,7 +27,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label><g:message code="table.field.room"/> </label>
-                    <g:textField name="namaRuangan" class="form-control" placeholder="Masukkan Nama Ruangan"/>
+                    <g:textField name="namaRuangan" class="form-control" placeholder="${message(code: "placeholder.room")}"/>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>
@@ -45,7 +45,7 @@
                         </g:each>
                     </select>
                 </div>
-                <g:actionSubmit value="Tambah Matakuliah" action="save" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>

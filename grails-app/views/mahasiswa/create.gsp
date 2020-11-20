@@ -28,15 +28,15 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Nim</label>
-                        <g:textField name="nim" class="form-control" placeholder="Masukkan Nim"/>
+                        <g:textField name="nim" class="form-control" placeholder="${message(code: "placeholder.nim")}"/>
                     </div>
                     <div class="form-group">
                         <label><g:message code="table.field.name"/></label>
-                        <g:textField name="nama" class="form-control" placeholder="Masukkan Nama"/>
+                        <g:textField name="nama" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
                     </div>
                     <div class="form-group">
                         <label><g:message code="table.field.address"/> </label>
-                        <g:textField name="alamat" class="form-control" placeholder="Masukkan Alamat"/>
+                        <g:textField name="alamat" class="form-control" placeholder="${message(code: "placeholder.address")}"/>
                     </div>
                     <div class="form-group">
                         <label><g:message code="table.field.date"/> </label>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label><g:message code="table.field.phone"/> </label>
-                        <g:textField name="noTelp" class="form-control" placeholder="Masukkan Nomor Telepon"/>
+                        <g:textField name="noTelp" class="form-control" placeholder="${message(code: "placeholder.phone")}"/>
                     </div>
                     <div class="form-group">
                         <label><g:message code="table.field.major"/> </label>
@@ -54,7 +54,7 @@
                             </g:each>
                         </select>
                     </div>
-                    <g:actionSubmit value="Save" action="save" class="btn btn-primary" />
+                    <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary" />
                 </div>
                 <!-- /.card-body -->
             </g:form>
