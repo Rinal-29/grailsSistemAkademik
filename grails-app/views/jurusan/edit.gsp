@@ -12,17 +12,17 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1>Edit Daftar Jurusan</h1>
+    <h1><g:message code="major.header.edit"/> </h1>
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="update" role="form" id="${jurusan.id}">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Nama Jurusan</label>
+                    <label><g:message code="table.field.major"/> </label>
                     <input required name="nama" class="form-control" value="${jurusan.nama}"/>
                 </div>
                 <div class="form-group">
-                    <label>Fakultas</label>
+                    <label><g:message code="table.field.faculty"/> </label>
                     <input required name="fakultas" class="form-control" value="${jurusan.fakultas}"/>
                 </div>
                 <g:actionSubmit value="update" class="btn btn-primary"/>

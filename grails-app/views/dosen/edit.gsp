@@ -12,7 +12,7 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Edit Data Dosen</h1>
+    <h1 class="mb-3"><g:message code="lecturer.header.edit"/> </h1>
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="update" role="form" id="${dosen.id}">
@@ -22,15 +22,15 @@
                     <input required name="nim" class="form-control" value="${dosen.nip}"/>
                 </div>
                 <div class="form-group">
-                    <label>Nama</label>
+                    <label><g:message code="table.field.name"/> </label>
                     <input required name="nama" class="form-control" value="${dosen.nama}"/>
                 </div>
                 <div class="form-group">
-                    <label>Alamat</label>
+                    <label><g:message code="table.field.address"/> </label>
                     <input required name="alamat" class="form-control" value="${dosen.alamat}"/>
                 </div>
                 <div class="form-group">
-                    <label>Jurusan</label>
+                    <label><g:message code="table.field.major"/> </label>
                     <select name="jurusan" class="custom-select">
                         <g:each in="${jurusan}" var="jur">
                             <option value="${jur.id}">${jur.nama}</option>

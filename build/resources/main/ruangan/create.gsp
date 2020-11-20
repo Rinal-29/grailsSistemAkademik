@@ -12,10 +12,10 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Tambah Daftar Ruangan</h1>
+    <h1 class="mb-3"><g:message code="room.header.add"/> </h1>
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message">${flash.message}</div>
+            <div class="message"><g:message code="input.error"/> </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -26,11 +26,11 @@
         <g:form action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Nama Ruangan</label>
+                    <label><g:message code="table.field.room"/> </label>
                     <g:textField name="namaRuangan" class="form-control" placeholder="Masukkan Nama Ruangan"/>
                 </div>
                 <div class="form-group">
-                    <label>Nama Matakuliah</label>
+                    <label><g:message code="table.filed.courses"/> </label>
                     <select name="mataKuliah" class="custom-select">
                         <g:each in="${matkul}" var="kul">
                             <option value="${kul.id}">${kul.namaMatkul}</option>
@@ -38,7 +38,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Nama Jurusan</label>
+                    <label><g:message code="table.field.major"/> </label>
                     <select name="jurusan" class="custom-select">
                         <g:each in="${jurusan}" var="jur">
                             <option value="${jur.id}">${jur.nama}</option>

@@ -12,7 +12,7 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Edit daftar ruangan</h1>
+    <h1 class="mb-3"><g:message code="room.header.edit"/> </h1>
 <div class="card card-primary col-md-10">
 <!-- form start -->
     <g:form action="update" role="form" id="${ruangan.id}">

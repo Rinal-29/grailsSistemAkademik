@@ -25,7 +25,7 @@
 
             <g:form action="save">
                 <div class="input-group mb-3">
-                    <g:textField name="name" type="text" class="form-control" placeholder="Username"/>
+                    <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-person-booth"></span>
@@ -52,7 +52,7 @@
 
                 <div class="social-auth-links text-center mb-3">
                     <g:actionSubmit action="save" value="Daftar" class="btn btn-block btn-danger mb-3"/>
-                    <a href="../login/index" class="btn btn-block btn-primary">
+                    <a href="../login/auth" class="btn btn-block btn-primary">
                         kembali
                     </a>
                 </div>

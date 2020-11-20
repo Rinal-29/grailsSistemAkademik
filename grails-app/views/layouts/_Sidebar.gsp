@@ -2,17 +2,18 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link text-center">
-        <span class="brand-text font-weight-light"><g:message code="navbar.brand.name"/></span>
+        <span class="brand-text font-weight-light"><g:message code="navbar.brand.name"/> </span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar Menu -->
+
         <nav class="mt-2" id="myTab">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="/dashboard/index" class="nav-link">
+                    <a href="${createLink(controller: 'dashboard', action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>
                             <g:message code="sidebar.dashboard.name"/>
@@ -20,7 +21,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/mahasiswa/index" class="nav-link">
+                    <a href="${createLink(controller: 'mahasiswa',action: 'list', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             <g:message code="sidebar.student.name"/>
@@ -28,7 +29,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/dosen" class="nav-link">
+                    <a href="${createLink(controller: 'dosen',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-chalkboard-teacher"></i>
                         <p>
                             <g:message code="sidebar.lecture.name"/>
@@ -36,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/matakuliah" class="nav-link">
+                    <a href="${createLink(controller: 'matakuliah',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-book-open"></i>
                         <p>
                             <g:message code="sidebar.courses.name"/>
@@ -44,7 +45,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/ruangan" class="nav-link">
+                    <a href="${createLink(controller: 'ruangan',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-school"></i>
                         <p>
                             <g:message code="sidebar.room.name"/>
@@ -52,7 +53,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jurusan" class="nav-link">
+                    <a href="${createLink(controller: 'jurusan',action: 'index', params: [lang: params?.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-university"></i>
                         <p>
                             <g:message code="sidebar.major.name"/>
@@ -60,7 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/penasehatAkademik" class="nav-link">
+                    <a href="${createLink(controller: 'penasehatAkademik',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class= "nav-icon fas fa-address-book"></i>
                         <p>
                             <g:message code="sidebar.academic.name"/>
@@ -68,7 +69,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jadwal" class="nav-link">
+                    <a href="${createLink(controller: 'jadwal',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>
                             <g:message code="sidebar.schedule.name"/>
@@ -76,7 +77,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/nilai" class="nav-link">
+                    <a href="${createLink(controller: 'nilai',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-book-reader"></i>
                         <p>
                             <g:message code="sidebar.score.name"/>
@@ -84,7 +85,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/krs" class="nav-link">
+                    <a href="${createLink(controller: 'krs',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard"></i>
                         <p>
                             <g:message code="sidebar.krs.name"/>
@@ -93,7 +94,7 @@
                 </li>
                 <sec:ifAllGranted roles="ROLE_ADMIN">
                     <li class="nav-item">
-                        <a href="/tahunAkademik" class="nav-link">
+                        <a href="${createLink(controller: 'tahunAkademik',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-calendar-alt"></i>
                             <p>
                                 <g:message code="sidebar.year.name"/>
@@ -101,7 +102,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/user" class="nav-link">
+                        <a href="${createLink(controller: 'user',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
                                 <g:message code="sidebar.account.name"/>

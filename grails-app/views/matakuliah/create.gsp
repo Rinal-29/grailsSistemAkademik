@@ -12,21 +12,21 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Tambah Matakuliah</h1>
+    <h1 class="mb-3"><g:message code="courses.header.add"/> </h1>
     <g:if test="${flash.message}">
     <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-        <div class="message">${flash.message}</div>
+        <div class="message"><g:message code="input.error"/> </div>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-</g:if>
+    </g:if>
     <div class="card card-primary col-md-10">
 <!-- form start -->
     <g:form action="save" role="form">
         <div class="card-body">
             <div class="form-group">
-                <label>Nama Matakuliah</label>
+                <label><g:message code="table.filed.courses"/> </label>
                 <g:textField name="namaMatkul" class="form-control" placeholder="Masukkan Nama Matakuliah"/>
             </div>
             <div class="form-group">

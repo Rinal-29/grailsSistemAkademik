@@ -12,10 +12,10 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Masukkan Nilai</h1>
+    <h1 class="mb-3"><g:message code="score.header.add"/></h1>
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message">${flash.message}</div>
+            <div class="message"><g:message code="input.error"/> </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -26,7 +26,7 @@
         <g:form action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Nama</label>
+                    <label><g:message code="table.field.student"/> </label>
                     <g:textField name="nama" class="form-control" placeholder="Masukkan Nama"/>
                 </div>
                 <div class="form-group">
@@ -34,7 +34,7 @@
                     <g:textField name="nim" class="form-control" placeholder="Masukkan Nim"/>
                 </div>
                 <div class="form-group">
-                    <label>Matakuliah</label>
+                    <label><g:message code="table.filed.courses"/> </label>
                     <select name="mataKuliah" class="custom-select">
                         <g:each in="${listMatkul}" var="matkul">
                             <option value="${matkul.id}">${matkul.namaMatkul}</option>
@@ -42,11 +42,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Nilai UTS</label>
+                    <label><g:message code="table.filed.score.uts"/></label>
                     <g:textField name="uts" class="form-control" placeholder="Masukkan Nilai UTS"/>
                 </div>
                 <div class="form-group">
-                    <label>Nilai UAS</label>
+                    <label><g:message code="table.field.score.uas"/> </label>
                     <g:textField name="uas" class="form-control" placeholder="Masukkan Nilai UAS"/>
                 </div>
                 <g:actionSubmit value="save" class="btn btn-primary"/>

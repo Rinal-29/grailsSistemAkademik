@@ -15,7 +15,7 @@ class TahunAkademikController {
     def save() {
         def tahunAkademik = new TahunAkademik(params)
         tahunAkademik.save flush: true,  failOnError: true
-        redirect action: "index"
+        redirect(action: "index", controller: "tahunAkademik", params: [lang:params.lang])
     }
 
     def edit() {
@@ -27,12 +27,12 @@ class TahunAkademikController {
         def tahunAkademik = TahunAkademik.get(params.id)
         tahunAkademik.properties = params
         tahunAkademik.save flush: true, failOnError: true
-        redirect action: "index"
+        redirect(action: "index", controller: "tahunAkademik", params: [lang: params.lang])
     }
 
     def delete() {
         def tahunAkademik = TahunAkademik.get(params.id)
         tahunAkademik.delete()
-        redirect action: "index"
+        redirect(action: "index", controller: "tahunAkademik", params: [lang: params.lang])
     }
 }

@@ -5,11 +5,11 @@ import sistemakademik.auth.Role
 import sistemakademik.auth.User
 import sistemakademik.auth.UserRole
 
-@Secured(["permitAll"])
+@Secured(["ROLE_ADMIN"])
 class UserController {
 
     def index() {
-        def user = User.list()
+        def user = UserRole.list()
         [users:user]
     }
 
@@ -26,10 +26,21 @@ class UserController {
                 UserRole.create(user, role, true)
             }
 
-            redirect action: "auth", controller: "login"
+            redirect(action: "index", controller: "user", params: [lang: params.lang])
         } else  {
-            flash.message = "Lengkapi Data Anda"
+            flash.message = "Lengkapi data anda dengan benar"
             redirect action: "create"
         }
+    }
+
+    def delete() {
+        def user = User.get(params.id)
+        user.delete()
+        redirect action: "index"
+    }
+
+    def edit() {
+        def user = User.get(params.id)
+        [users: user]
     }
 }

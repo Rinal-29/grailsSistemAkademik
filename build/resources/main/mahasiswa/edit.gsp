@@ -12,11 +12,11 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Edit Data Mahasiswa</h1>
+    <h1 class="mb-3"><g:message code="student.header.edit"/> </h1>
 
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message">${flash.message}</div>
+            <div class="message"><g:message code="input.error"/></div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -32,23 +32,23 @@
                     <input required name="nim" class="form-control" value="${mhs.nim}"/>
                 </div>
                 <div class="form-group">
-                    <label>Nama</label>
+                    <label><g:message code="table.field.name"/> </label>
                     <input required name="nama" class="form-control" value="${mhs.nama}"/>
                 </div>
                 <div class="form-group">
-                    <label>Alamat</label>
+                    <label><g:message code="table.field.address"/> </label>
                     <input required name="alamat" class="form-control" value="${mhs.alamat}"/>
                 </div>
                 <div class="form-group">
-                    <label>Tanggal Lahir</label>
+                    <label><g:message code="table.field.date"/> </label>
                     <input required type="date" name="tanggalLahir" class="form-control" value="${mhs.tanggalLahir}"/>
                 </div>
                 <div class="form-group">
-                    <label>No Telepon</label>
+                    <label><g:message code="table.field.phone"/> </label>
                     <input required name="noTelp" class="form-control" value="${mhs.noTelp}"/>
                 </div>
                 <div class="form-group">
-                    <label>Jurusan</label>
+                    <label><g:message code="table.field.major"/> </label>
                     <select name="jurusan" class="custom-select">
                         <g:each in="${jurusan}" var="jur">
                             <option value="${jur.id}">${jur.nama}</option>

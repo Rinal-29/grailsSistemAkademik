@@ -5,12 +5,39 @@
   Time: 17.28
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-</body>
-</html>
+<h1 class="mb-3"><g:message code="user.header.add"/> </h1>
+<g:if test="${flash.message}">
+    <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
+        <div class="message">${flash.message}</div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</g:if>
+<div class="card card-primary col-md-10">
+    <!-- form start -->
+    <g:form action="save" role="form">
+        <div class="card-body">
+            <div class="form-group">
+                <label>Username</label>
+                <g:textField name="=username" class="form-control" placeholder="Masukkan Username"/>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <g:passwordField name="password" class="form-control" placeholder="Masukkan Password"/>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <g:textField name="email" class="form-control" placeholder="Masukkan Email"/>
+            </div>
+            <g:actionSubmit value="save" class="btn btn-primary"/>
+        </div>
+        <!-- /.card-body -->
+    </g:form>
+</div>
+
+<g:render template="/layouts/Footer"/>

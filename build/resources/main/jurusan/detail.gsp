@@ -20,6 +20,7 @@
                 <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
+                        <th></th>
                         <th>Nama</th>
                         <th>Jurusan</th>
                     </tr>
@@ -27,6 +28,7 @@
                     <tbody>
                     <g:each in="${mahasiswa}" var="mhs">
                         <tr>
+                            <td class="text-center"></td>
                             <td>${mhs.nama}</td>
                             <td>${mhs.jurusan.nama}</td>
                         </tr>

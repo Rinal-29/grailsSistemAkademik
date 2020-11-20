@@ -20,10 +20,10 @@ class RuanganController {
         def ruangan = new Ruangan(params)
         if (ruangan.validate()) {
             ruangan.save flush:true, failOnError: true
-            redirect action:"index"
+            redirect(controller: "ruangan", action: "index", params: [lang: params.lang])
         } else {
             flash.message = "Masukkan semua data dengan benar"
-            redirect action: "create"
+            redirect(controller: "ruangan", action: "create", params: [lang: params.lang])
         }
     }
 
@@ -38,12 +38,12 @@ class RuanganController {
         def ruangan = Ruangan.get(params.id)
         ruangan.properties = params
         ruangan.save flush:true, failOnError:true
-        redirect action: "index"
+        redirect(controller: "ruangan", action: "index", params: [lang: params.lang])
     }
 
     def delete() {
         def ruangan = Ruangan.get(params.id)
         ruangan.delete()
-        redirect action: "index"
+        redirect(controller: "ruangan", action: "index", params:[lang:params.lang])
     }
 }

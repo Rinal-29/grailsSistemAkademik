@@ -12,19 +12,19 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Daftar Tahun Akademik</h1>
+    <h1 class="mb-3"><g:message code="academy.header.name"/> </h1>
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tabel Daftar Tahun Akademik</h3>
+                <h3 class="card-title"><g:message code="academy.table.name"/> </h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th>Tahun Akademik</th>
-                        <th>Action</th>
+                        <th><g:message code="table.field.academic"/> </th>
+                        <th><g:message code="table.field.action"/> </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,8 +32,8 @@
                         <tr>
                             <td>${ta.priode}</td>
                             <td class="text-center">
-                                <g:link action="edit"  id="${ta.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${ta.id}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                <g:link action="edit"  id="${ta.id}" params="[lang:params.lang]" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
+                                <g:link action="delete" id="${ta.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>
@@ -42,7 +42,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:link action="create" class="btn btn-primary float-right">Tambah Tahun Akademik</g:link>
+                <g:link action="create" params="[lang: params.lang]" class="btn btn-primary float-right"><g:message code="academy.button.name"/> </g:link>
             </div>
         </div>
     </div>

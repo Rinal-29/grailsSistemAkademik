@@ -12,13 +12,13 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1>Edit Nilai Mahasiswa</h1>
+    <h1><g:message code="score.header.edit"/> </h1>
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="update" role="form" id="${nilaiMhs.id}">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Nama</label>
+                    <label><g:message code="table.field.student"/> </label>
                     <input required name="nama" class="form-control" value="${nilaiMhs.nama}"/>
                 </div>
                 <div class="form-group">
@@ -26,7 +26,7 @@
                     <input required name="nim" class="form-control" value="${nilaiMhs.nim}"/>
                 </div>
                 <div class="form-group">
-                    <label>Matakuliah</label>
+                    <label><g:message code="table.filed.courses"/> </label>
                     <select name="mataKuliah" class="custom-select">
                         <g:each in="${listMatkul}" var="matkul">
                             <option value="${matkul.id}">${matkul.namaMatkul}</option>
@@ -34,11 +34,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Nilai UTS</label>
+                    <label><g:message code="table.filed.score.uts"/> </label>
                     <input required name="uts" class="form-control" value="${nilaiMhs.uts}"/>
                 </div>
                 <div class="form-group">
-                    <label>Nilai UAS</label>
+                    <label><g:message code="table.field.score.uas"/> </label>
                     <input required name="uas" class="form-control" value="${nilaiMhs.uas}"/>
                 </div>
                 <g:actionSubmit value="update" class="btn btn-primary"/>

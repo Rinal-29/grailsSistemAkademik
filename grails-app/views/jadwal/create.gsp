@@ -12,10 +12,10 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Tambah Jadwal</h1>
+    <h1 class="mb-3"><g:message code="schedule.header.add"/></h1>
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message">${flash.message}</div>
+            <div class="message"><g:message code="input.error"/> </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -26,7 +26,7 @@
         <g:form action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Dosen</label>
+                    <label><g:message code="sidebar.lecture.name"/></label>
                     <select name="dosen" class="custom-select">
                         <g:each in="${dosen}" var="dsn">
                             <option value="${dsn.id}">${dsn.nama}</option>
@@ -34,7 +34,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>MataKuliah</label>
+                    <label><g:message code="table.filed.courses"/></label>
                     <select name="mataKuliah" class="custom-select">
                         <g:each in="${matkul}" var="kuliah">
                             <option value="${kuliah.id}">${kuliah.namaMatkul}</option>
@@ -42,15 +42,15 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Hari</label>
+                    <label><g:message code="table.filed.day"/></label>
                     <input type="date" name="hari" class="form-control" placeholder="Masukkan hari"/>
                 </div>
                 <div class="form-group">
-                    <label>Jam</label>
+                    <label><g:message code="table.field.time"/></label>
                     <input type="time" name="jam" class="form-control" placeholder="Masukkan jam"/>
                 </div>
                 <div class="form-group">
-                    <label>Tahun Akademik</label>
+                    <label><g:message code="table.field.academic"/></label>
                     <select name="tahunAkademik" class="custom-select">
                         <g:each in="${tahunAkademik}" var="ta">
                             <option value="${ta.id}">${ta.priode}</option>
@@ -58,7 +58,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Ruangan</label>
+                    <label><g:message code="table.field.room"/></label>
                     <select name="ruangan" class="custom-select">
                         <g:each in="${ruangan}" var="kelas">
                             <option value="${kelas.id}">${kelas.namaRuangan}</option>

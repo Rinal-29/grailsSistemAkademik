@@ -8,6 +8,7 @@ class MahasiswaController {
         redirect action: "list"
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def jurusan = Jurusan.list()
         [jurusan: jurusan]
@@ -22,13 +23,14 @@ class MahasiswaController {
         def mahasiswa = new Mahasiswa(params)
         if (mahasiswa.validate()) {
             mahasiswa.save flush:true, failOnError:true
-            redirect action: "list"
+            redirect(controller: "mahasiswa", action: "list", params: [lang: params.lang])
         } else {
             flash.message = "Masukkan semua data dengan benar"
-            redirect action: "create"
+            redirect(controller:  "mahasiswa", action: "create", params: [lang: params.lang])
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def mahasiswa = Mahasiswa.get(params.id)
         def jurusan =  Jurusan.list()
@@ -37,14 +39,20 @@ class MahasiswaController {
 
     def update() {
         def mhs = Mahasiswa.get(params.id)
-        mhs.properties = params
-        mhs.save flush:true, failOnError:true
-        redirect action: "list"
+        if (mhs.validate()){
+            mhs.properties = params
+            mhs.save flush:true, failOnError:true
+            redirect(controller: "mahasiswa", action: "list", params: [lang: params.lang])
+        } else {
+            flash.message = "Masukkan Semua data dengan benar"
+            redirect(controller: "mahasiswa", action: "edit", params: [lang: params.lang, id: params.id] )
+        }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def mahasiswa = Mahasiswa.get(params.id)
         mahasiswa.delete()
-        redirect action: "list"
+        redirect(controller: "mahasiswa", action: "list", params: [lang: params.lang])
     }
 }

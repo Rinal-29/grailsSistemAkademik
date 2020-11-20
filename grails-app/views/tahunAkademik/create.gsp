@@ -12,13 +12,13 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Tambah Tahun Akademik</h1>
+    <h1 class="mb-3"><g:message code="academy.header.add"/> </h1>
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Tahun Akademik</label>
+                    <label><g:message code="table.field.academic"/> </label>
                     <select name="priode" class="custom-select">
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>

@@ -6,6 +6,7 @@ import grails.plugin.springsecurity.annotation.Secured
 class DashboardController {
 
     def index() {
+        String test = params.lang
         def mahasiswa = Mahasiswa.count
         def dosen = Dosen.count
         def matkul = MataKuliah.count

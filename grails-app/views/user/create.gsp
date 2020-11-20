@@ -5,73 +5,39 @@
   Time: 17.28
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Buat Akun</title>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
 
-    <asset:stylesheet src="application.css"/>
-</head>
-
-<body class="hold-transition login-pagehold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
-        <a href=""><b>Register</b> Page</a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="card">
-        <div class="card-body login-card-body">
-            <p class="login-box-msg">Buat Akun Anda</p>
-
-            <g:form action="save">
-                <div class="input-group mb-3">
-                    <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-person-booth"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <g:passwordField name="password" type="password" class="form-control" placeholder="Password"/>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <g:textField name="email" type="email" class="form-control" placeholder="Email"/>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="social-auth-links text-center mb-3">
-                    <g:actionSubmit action="save" value="Daftar" class="btn btn-block btn-danger mb-3"/>
-                    <a href="../login/auth" class="btn btn-block btn-primary">
-                        kembali
-                    </a>
-                </div>
-            </g:form>
-        <!-- /.social-auth-links -->
-        </div>
-        <!-- /.login-card-body -->
-    </div>
-</div>
-
+<h1 class="mb-3"><g:message code="user.header.add"/> </h1>
 <g:if test="${flash.message}">
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
         <div class="message">${flash.message}</div>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
 </g:if>
+<div class="card card-primary col-md-10">
+    <!-- form start -->
+    <g:form action="save" role="form">
+        <div class="card-body">
+            <div class="form-group">
+                <label>Username</label>
+                <g:textField name="=username" class="form-control" placeholder="Masukkan Username"/>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <g:passwordField name="password" class="form-control" placeholder="Masukkan Password"/>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <g:textField name="email" class="form-control" placeholder="Masukkan Email"/>
+            </div>
+            <g:actionSubmit value="save" class="btn btn-primary"/>
+        </div>
+        <!-- /.card-body -->
+    </g:form>
+</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<asset:javascript src="application.js"/>
-</body>
-</html>
+<g:render template="/layouts/Footer"/>

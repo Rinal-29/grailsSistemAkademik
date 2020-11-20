@@ -29,7 +29,7 @@
                     <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
+                            <span class="fas fa-user"></span>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="social-auth-links text-center mb-3">
                     <g:actionSubmit value="${message(code: 'springSecurity.login.button')}" action="dashboard" class="btn btn-block btn-primary mb-3"/>
                     <p>- Atau -</p>
-                    <a href="/user/create" class="btn btn-block btn-danger">
+                    <a href="/register" class="btn btn-block btn-danger">
                         Daftar!
                     </a>
                 </div>

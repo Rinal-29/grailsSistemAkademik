@@ -12,13 +12,13 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Tambah Daftar Krs</h1>
+    <h1 class="mb-3"><g:message code="krs.header.add"/> </h1>
     <div class="card card-primary col-md-10">
     <!-- form start -->
     <g:form action="save" role="form">
         <div class="card-body">
             <div class="form-group">
-                <label>Mahasiswa</label>
+                <label><g:message code="table.field.student"/> </label>
                 <select name="mahasiswa" class="custom-select">
                     <g:each in="${mahasiswa}" var="mhs">
                         <option value="${mhs.id}">${mhs.nama}</option>
@@ -26,7 +26,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Matakuliah</label>
+                <label><g:message code="table.filed.courses"/> </label>
                 <select name="mataKuliah" class="custom-select">
                     <g:each in="${matakuliah}" var="matkul">
                         <option value="${matkul.id}">${matkul.namaMatkul}</option>
@@ -34,7 +34,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Tahun Akademik</label>
+                <label><g:message code="table.field.academic"/> </label>
                 <select name="tahunAkademik" class="custom-select">
                     <g:each in="${tahunAkademi}" var="ta">
                         <option value="${ta.id}">${ta.priode}</option>
@@ -42,7 +42,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Penasehat Akademik</label>
+                <label><g:message code="table.field.advisor"/> </label>
                 <select name="penasehatAkademik" class="custom-select">
                     <g:each in="${penasehat}" var="pa">
                         <option value="${pa.id}">${pa.dosen.nama}</option>

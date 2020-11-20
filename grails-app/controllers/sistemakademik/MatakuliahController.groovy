@@ -16,10 +16,10 @@ class MatakuliahController {
         def matkul = new MataKuliah(params)
         if (matkul.validate()) {
             matkul.save flush: true, failOnError: true
-            redirect action:"index"
+            redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
         } else {
             flash.message = "Masukkan semua data dengan benar"
-            redirect action: "create"
+            redirect(controller: "matakuliah", action: "create", params: [lang: params.lang])
         }
     }
 
@@ -32,12 +32,12 @@ class MatakuliahController {
         def matkul = MataKuliah.get(params.id)
         matkul.properties = params
         matkul.save flush:true, failOnError:true
-        redirect action: "index"
+        redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
     }
 
     def delete() {
         def matkul = MataKuliah.get(params.id)
         matkul.delete()
-        redirect action: "index"
+        redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
     }
 }

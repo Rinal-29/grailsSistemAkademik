@@ -10,6 +10,7 @@ class DosenController {
         [listDosen: dosen]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def jurusan = Jurusan.list()
         [jurusan: jurusan]
@@ -19,13 +20,14 @@ class DosenController {
         def dosen = new Dosen(params)
         if (dosen.validate()) {
             dosen.save flush: true, failOnErorr: true
-            redirect action: "index", controller:"dosen"
+            redirect(action: "index", controller: "dosen", params: [lang: params.lang])
         } else  {
             flash.message = "Masukkan semua data dengan benar"
-            redirect action: "create"
+            redirect(action: "create", controller: "dosen", params: [lang: params.lang])
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def dosen = Dosen.get(params.id)
         def jurusan = Jurusan.list()
@@ -34,14 +36,20 @@ class DosenController {
 
     def update() {
         def dosen = Dosen.get(params.id)
-        dosen.properties = params
-        dosen.save flush: true, failOnError:true
-        redirect action: "index"
+        if (dosen.validate()){
+            dosen.properties = params
+            dosen.save flush: true, failOnError:true
+            redirect(action: "index", controller: "dosen", params: [lang: params.lang])
+        } else {
+            flash.message = "Masukkan Semua Data Dengan Benar"
+            redirect(action: "edit", controller: "dosen", params: [lang: params.lang, id: params.id])
+        }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def dosen = Dosen.get(params.id)
         dosen.delete()
-        redirect action: "index"
+        redirect(controller: "dosen", action: "index", params: [lang :params.lang])
     }
 }

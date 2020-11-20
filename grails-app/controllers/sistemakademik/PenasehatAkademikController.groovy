@@ -24,7 +24,7 @@ class PenasehatAkademikController {
     def save () {
         def penasehat = new PenasehatAkademik(params)
         penasehat.save flush: true, failOnErorr: true
-        redirect action: "index"
+        redirect(controller:"penasehatAkademik", action: "index", params: [lang:params.lang])
     }
 
     def edit() {
@@ -44,7 +44,7 @@ class PenasehatAkademikController {
         def penasehat = PenasehatAkademik.get(params.id)
         penasehat.properties = params
         penasehat.save flush: true, failOnError:true
-        redirect action: "index"
+        redirect(controller: "penasehatAkademik",action: "index", params: [lang: params.lang])
     }
 
     def delete() {

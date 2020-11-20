@@ -26,7 +26,7 @@ class KrsController {
     def save() {
         def krs = new Krs(params)
         krs.save flush: true, failOnError: true
-        redirect action: "index"
+        redirect(action: "index", controller: "krs", params: [lang: params.lang])
     }
 
     def edit() {
@@ -48,12 +48,12 @@ class KrsController {
         def krs = Krs.get(params.id)
         krs.properties = params
         krs.save flush: true, failOnError: true
-        redirect action: "index"
+        redirect(action: "index", controller: "krs", params: [lang: params.lang])
     }
 
     def delete() {
         def krs = Krs.get(params.id)
         krs.delete()
-        redirect action: "index"
+        redirect(action: "index", controller: "krs", params: [lang: params.lang])
     }
 }

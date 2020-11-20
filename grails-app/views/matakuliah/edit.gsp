@@ -12,14 +12,14 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3">Edit Data Matakuliah</h1>
+    <h1 class="mb-3"><g:message code="courses.header.edit"/></h1>
 
     <div class="card card-primary col-md-10">
     <!-- form start -->
         <g:form action="update" role="form" id="${matkul.id}">
             <div class="card-body">
                 <div class="form-group">
-                    <label>Nama Matakuliah</label>
+                    <label><g:message code="table.filed.courses"/> </label>
                     <input required name="namaMatkul" class="form-control" value="${matkul.namaMatkul}"/>
                 </div>
                 <div class="form-group">

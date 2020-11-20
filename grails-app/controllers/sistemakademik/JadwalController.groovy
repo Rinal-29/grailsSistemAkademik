@@ -27,10 +27,10 @@ class JadwalController {
         def jadwal = new Jadwal(params)
         if (jadwal.validate()) {
             jadwal.save flush: true, failOnError: true
-            redirect action: "index"
+            redirect(controller: "jadwal", action: "index", params: [lang: params.lang])
         } else {
             flash.message = "Masukkan semua data dengan benar"
-            redirect action: "create"
+            redirect(controller: "jadwal", action: "create", params: [lang: params.lang])
         }
     }
 
@@ -53,12 +53,12 @@ class JadwalController {
         def jadwal = Jadwal.get(params.id)
         jadwal.properties = params
         jadwal.save flush:true, failOnError: true
-        redirect action: "index"
+        redirect(controller: "jadwal", action: "index", params: [lang: params.lang])
     }
 
     def delete() {
         def jadwal = Jadwal.get(params.id)
         jadwal.delete()
-        redirect action: "index"
+        redirect(controller: "jadwal", action: "index", params: [lang: params.lang])
     }
 }
