@@ -10,6 +10,7 @@ class JurusanController {
         [listJurusan: jurusan]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {}
 
     def save() {
@@ -23,6 +24,7 @@ class JurusanController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def jurusan = Jurusan.get(params.id)
         [jurusan: jurusan]
@@ -35,6 +37,7 @@ class JurusanController {
         redirect(controller: "jurusan", action: "index", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def jurusan = Jurusan.get(params.id)
         jurusan.delete()

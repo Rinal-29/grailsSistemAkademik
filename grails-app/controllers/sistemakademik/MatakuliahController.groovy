@@ -10,6 +10,7 @@ class MatakuliahController {
         [listmatkul:matkul]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {}
 
     def save() {
@@ -23,6 +24,7 @@ class MatakuliahController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def matkul = MataKuliah.get(params.id)
         [matkul:matkul]
@@ -35,6 +37,7 @@ class MatakuliahController {
         redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def matkul = MataKuliah.get(params.id)
         matkul.delete()

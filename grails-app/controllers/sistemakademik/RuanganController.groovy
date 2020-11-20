@@ -10,6 +10,7 @@ class RuanganController {
         [ruangan:ruangan]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def jurusan = Jurusan.list()
         def matkul = MataKuliah.list()
@@ -27,6 +28,7 @@ class RuanganController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def ruangan = Ruangan.get(params.id)
         def jurusan = Jurusan.list()
@@ -41,6 +43,7 @@ class RuanganController {
         redirect(controller: "ruangan", action: "index", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def ruangan = Ruangan.get(params.id)
         ruangan.delete()

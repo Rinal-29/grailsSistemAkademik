@@ -10,6 +10,7 @@ class KrsController {
         [lisKrs: krs]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def mahasiswa = Mahasiswa.list()
         def mataKuliah = MataKuliah.list()
@@ -29,6 +30,7 @@ class KrsController {
         redirect(action: "index", controller: "krs", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def krs = Krs.get(params.id)
         def mahasiswa = Mahasiswa.list()
@@ -51,6 +53,7 @@ class KrsController {
         redirect(action: "index", controller: "krs", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def krs = Krs.get(params.id)
         krs.delete()

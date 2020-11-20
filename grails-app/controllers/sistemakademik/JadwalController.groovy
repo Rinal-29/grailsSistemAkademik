@@ -10,6 +10,7 @@ class JadwalController {
         [listJadwal: jadwal]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def dosen = Dosen.list()
         def matkul = MataKuliah.list()
@@ -34,6 +35,7 @@ class JadwalController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def jadwal = Jadwal.get(params.id)
         def dosen = Dosen.list()
@@ -56,6 +58,7 @@ class JadwalController {
         redirect(controller: "jadwal", action: "index", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def jadwal = Jadwal.get(params.id)
         jadwal.delete()

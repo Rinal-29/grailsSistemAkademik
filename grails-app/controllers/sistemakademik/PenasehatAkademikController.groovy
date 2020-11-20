@@ -10,6 +10,7 @@ class PenasehatAkademikController {
         [penasehat: penasehat]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def mahasiswa = Mahasiswa.list()
         def dosen = Dosen.list()
@@ -27,6 +28,7 @@ class PenasehatAkademikController {
         redirect(controller:"penasehatAkademik", action: "index", params: [lang:params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def penasehat = PenasehatAkademik.get(params.id)
         def mahasiswa = Mahasiswa.list()
@@ -47,6 +49,7 @@ class PenasehatAkademikController {
         redirect(controller: "penasehatAkademik",action: "index", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def penasehat = PenasehatAkademik.get(params.id)
         penasehat.delete()

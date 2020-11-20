@@ -10,6 +10,7 @@ class NilaiController {
         [listNilai: nilai]
     }
 
+    @Secured(["ROLE_ADMIN"])
     def create() {
         def mataKuliah = MataKuliah.list()
         [listMatkul: mataKuliah]
@@ -26,6 +27,7 @@ class NilaiController {
         }
     }
 
+    @Secured(["ROLE_ADMIN"])
     def edit() {
         def nilai = Nilai.get(params.id)
         def mataKuliah = MataKuliah.list()
@@ -42,6 +44,7 @@ class NilaiController {
         redirect(action: "index", controller: "nilai", params: [lang: params.lang])
     }
 
+    @Secured(["ROLE_ADMIN"])
     def delete() {
         def nilai = Nilai.get(params.id)
         nilai.delete()
