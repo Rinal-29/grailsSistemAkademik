@@ -23,7 +23,7 @@
                         <th>No</th>
                         <th><g:message code="table.field.room"/> </th>
                         <th><g:message code="table.filed.courses"/> </th>
-                        <th><g:message code="table.filed.courses"/> </th>
+                        <th><g:message code="table.field.major"/> </th>
                         <sec:ifAllGranted roles="ROLE_ADMIN">
                             <th><g:message code="table.field.action"/> </th>
                         </sec:ifAllGranted>

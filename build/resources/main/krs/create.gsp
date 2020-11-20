@@ -49,7 +49,7 @@
                     </g:each>
                 </select>
             </div>
-            <g:actionSubmit value="save" class="btn btn-primary"/>
+            <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
         </div>
         <!-- /.card-body -->
     </g:form>

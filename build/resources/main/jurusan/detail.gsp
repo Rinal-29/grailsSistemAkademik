@@ -20,7 +20,7 @@
                 <table id="myTable" class="table table-bordered display">
                     <thead>
                     <tr>
-                        <th></th>
+                        <th>No</th>
                         <th>Nama</th>
                         <th>Jurusan</th>
                     </tr>

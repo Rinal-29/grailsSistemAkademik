@@ -15,7 +15,7 @@
     <h1 class="mb-3"><g:message code="room.header.add"/> </h1>
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message"><g:message code="input.error"/> </div>
+            <div class="message">${flash.message}</div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -27,7 +27,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label><g:message code="table.field.room"/> </label>
-                    <g:textField name="namaRuangan" class="form-control" placeholder="Masukkan Nama Ruangan"/>
+                    <g:textField name="namaRuangan" class="form-control" placeholder="${message(code: "placeholder.room")}"/>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>
@@ -45,7 +45,7 @@
                         </g:each>
                     </select>
                 </div>
-                <g:actionSubmit value="Tambah Matakuliah" action="save" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>

@@ -25,7 +25,7 @@
                     <label><g:message code="table.field.faculty"/> </label>
                     <input required name="fakultas" class="form-control" value="${jurusan.fakultas}"/>
                 </div>
-                <g:actionSubmit value="update" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.update")}" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>

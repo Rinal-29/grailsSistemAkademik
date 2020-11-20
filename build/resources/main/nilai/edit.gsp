@@ -41,7 +41,7 @@
                     <label><g:message code="table.field.score.uas"/> </label>
                     <input required name="uas" class="form-control" value="${nilaiMhs.uas}"/>
                 </div>
-                <g:actionSubmit value="update" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.add")}"  action="update" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>

@@ -27,11 +27,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label><g:message code="table.field.student"/> </label>
-                    <g:textField name="nama" class="form-control" placeholder="Masukkan Nama"/>
+                    <g:textField name="nama" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
                 </div>
                 <div class="form-group">
                     <label>Nim</label>
-                    <g:textField name="nim" class="form-control" placeholder="Masukkan Nim"/>
+                    <g:textField name="nim" class="form-control" placeholder="${message(code: "placeholder.nim")}"/>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>
@@ -43,13 +43,13 @@
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.score.uts"/></label>
-                    <g:textField name="uts" class="form-control" placeholder="Masukkan Nilai UTS"/>
+                    <g:textField name="uts" class="form-control" placeholder="${message(code: "placeholder.uts")}"/>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.score.uas"/> </label>
-                    <g:textField name="uas" class="form-control" placeholder="Masukkan Nilai UAS"/>
+                    <g:textField name="uas" class="form-control" placeholder="${message(code: "placeholder.uas")}"/>
                 </div>
-                <g:actionSubmit value="save" class="btn btn-primary"/>
+                <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
             </div>
             <!-- /.card-body -->
         </g:form>
