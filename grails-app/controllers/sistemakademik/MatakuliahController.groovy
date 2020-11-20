@@ -18,7 +18,7 @@ class MatakuliahController {
             matkul.save flush: true, failOnError: true
             redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
         } else {
-            flash.message = "Masukkan semua data dengan benar"
+            flash.message = "${message(code: 'input.error')}"
             redirect(controller: "matakuliah", action: "create", params: [lang: params.lang])
         }
     }

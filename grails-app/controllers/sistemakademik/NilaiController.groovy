@@ -21,7 +21,7 @@ class NilaiController {
             nilai.save flush:true, failOnError: true
             redirect(action: "index", controller:"nilai", params: [lang: params.lang])
         } else {
-            flash.message = "Masukkan semua data dengan benar"
+            flash.message = "${message(code: 'input.error')}"
             redirect(action: "create", controller: "nilai", params:[lang: params.lang] )
         }
     }

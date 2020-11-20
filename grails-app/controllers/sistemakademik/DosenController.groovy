@@ -22,7 +22,7 @@ class DosenController {
             dosen.save flush: true, failOnErorr: true
             redirect(action: "index", controller: "dosen", params: [lang: params.lang])
         } else  {
-            flash.message = "Masukkan semua data dengan benar"
+            flash.message = "${message(code: 'input.error')}"
             redirect(action: "create", controller: "dosen", params: [lang: params.lang])
         }
     }

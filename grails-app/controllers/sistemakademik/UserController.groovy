@@ -28,8 +28,8 @@ class UserController {
 
             redirect(action: "index", controller: "user", params: [lang: params.lang])
         } else  {
-            flash.message = "Lengkapi data anda dengan benar"
-            redirect action: "create"
+            flash.message = "${message(code: 'input.error')}"
+            redirect(action: "create", controller: "user", params: [lang: params.lang])
         }
     }
 

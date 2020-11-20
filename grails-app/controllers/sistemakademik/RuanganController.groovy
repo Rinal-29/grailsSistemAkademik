@@ -22,7 +22,7 @@ class RuanganController {
             ruangan.save flush:true, failOnError: true
             redirect(controller: "ruangan", action: "index", params: [lang: params.lang])
         } else {
-            flash.message = "Masukkan semua data dengan benar"
+            flash.message = "${message(code: 'input.error')}"
             redirect(controller: "ruangan", action: "create", params: [lang: params.lang])
         }
     }

@@ -16,7 +16,7 @@
 
     <g:if test="${flash.message}">
         <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
-            <div class="message"><g:message code="input.error"/></div>
+            <div class="message">${flash.message}</div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
