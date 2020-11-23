@@ -18,18 +18,19 @@ class UserController {
     def save() {
         def user = new User(params)
 
-        if(user.validate()) {
-            user.save flush:true, failOnErorr: true
 
+        user.validate()
+        if (user.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [user: user])
+            return
+        } else {
+            user.save flush:true, failOnErorr: true
             def role = Role.findWhere(authority: "ROLE_USER")
             if (!user.authorities.contains(role)) {
                 UserRole.create(user, role, true)
             }
-
             redirect(action: "index", controller: "user", params: [lang: params.lang])
-        } else  {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(action: "create", controller: "user", params: [lang: params.lang])
         }
     }
 

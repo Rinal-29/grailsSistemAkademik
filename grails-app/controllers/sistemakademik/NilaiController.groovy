@@ -18,12 +18,15 @@ class NilaiController {
 
     def save() {
         def nilai = new Nilai(params)
-        if (nilai.validate()) {
+        def mataKuliah = MataKuliah.list()
+
+        nilai.validate()
+        if (nilai.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [nilai: nilai, listMatkul: mataKuliah])
+        } else {
             nilai.save flush:true, failOnError: true
             redirect(action: "index", controller:"nilai", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(action: "create", controller: "nilai", params:[lang: params.lang] )
         }
     }
 

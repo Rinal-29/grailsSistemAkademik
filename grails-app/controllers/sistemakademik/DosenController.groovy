@@ -18,11 +18,21 @@ class DosenController {
 
     def save() {
         def dosen = new Dosen(params)
-        if (dosen.validate()) {
+        def jurusan = Jurusan.list()
+
+        dosen.validate()
+        if(dosen.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [dosen: dosen, jurusan: jurusan])
+            return
+        } else {
             dosen.save flush: true, failOnErorr: true
             redirect(action: "index", controller: "dosen", params: [lang: params.lang])
+        }
+
+
+        if (dosen.validate()) {
         } else  {
-            flash.message = "${message(code: 'input.error')}"
             redirect(action: "create", controller: "dosen", params: [lang: params.lang])
         }
     }

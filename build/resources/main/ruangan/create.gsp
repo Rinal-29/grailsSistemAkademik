@@ -28,6 +28,7 @@
                 <div class="form-group">
                     <label><g:message code="table.field.room"/> </label>
                     <g:textField name="namaRuangan" class="form-control" placeholder="${message(code: "placeholder.room")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${ruangan}" field="namaRuangan"/></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>

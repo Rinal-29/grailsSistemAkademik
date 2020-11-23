@@ -21,12 +21,16 @@ class MahasiswaController {
 
     def save () {
         def mahasiswa = new Mahasiswa(params)
-        if (mahasiswa.validate()) {
+        def jurusan = Jurusan.list()
+
+        mahasiswa.validate()
+        if (mahasiswa.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [mahasiswa: mahasiswa, jurusan: jurusan])
+            return
+        } else {
             mahasiswa.save flush:true, failOnError:true
             redirect(controller: "mahasiswa", action: "list", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(controller:  "mahasiswa", action: "create", params: [lang: params.lang])
         }
     }
 

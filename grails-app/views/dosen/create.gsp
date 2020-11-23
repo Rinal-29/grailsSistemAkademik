@@ -5,13 +5,10 @@
   Time: 15.41
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Tambahkan Dosen</title>
-    <meta name="layout" content="main">
-</head>
-<body>
+<g:render template="/layouts/Header"/>
+<g:render template="/layouts/Navbar"/>
+<g:render template="/layouts/Sidebar"/>
+
     <h1 class="mb-3"><g:message code="lecturer.header.add"/> </h1>
 
     <g:if test="${flash.message}">
@@ -25,15 +22,17 @@
 
     <div class="card card-primary col-md-10">
     <!-- form start -->
-        <g:form action="save" role="form">
+        <g:form name="form" action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
                     <label>Nip</label>
-                    <g:textField name="nip" class="form-control" placeholder="${message(code: "placeholder.nip")}"/>
+                    <g:textField value="${fieldValue(bean: dosen, field: "nip")}" name="nip" class="form-control" placeholder="${message(code: "placeholder.nip")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${dosen}" field="nip" /></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.name"/> </label>
                     <g:textField name="nama" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${dosen}" field="nama" /></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.address"/> </label>
@@ -52,5 +51,5 @@
             <!-- /.card-body -->
         </g:form>
     </div>
-</body>
-</html>
+
+<g:render template="/layouts/Footer"/>

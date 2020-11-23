@@ -25,14 +25,17 @@
             <div class="form-group">
                 <label>Username</label>
                 <g:textField name="=username" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
+                <span class="text-danger"><g:renderErrors bean="${user}" field="username" /></span>
             </div>
             <div class="form-group">
                 <label>Password</label>
                 <g:passwordField name="password" class="form-control" placeholder="${message(code: "placeholder.password")}"/>
+                <span class="text-danger"><g:renderErrors bean="${user}" field="password"/></span>
             </div>
             <div class="form-group">
                 <label>Email</label>
                 <g:textField name="email" class="form-control" placeholder="${message(code: "placeholder.email")}"/>
+                <span class="text-danger"><g:renderErrors bean="${user}" field="email"/></span>
             </div>
             <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
         </div>

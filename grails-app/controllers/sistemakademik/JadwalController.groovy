@@ -26,12 +26,25 @@ class JadwalController {
 
     def save() {
         def jadwal = new Jadwal(params)
-        if (jadwal.validate()) {
+        def dosen = Dosen.list()
+        def matkul = MataKuliah.list()
+        def tahunAkademik = TahunAkademik.list()
+        def ruangan = Ruangan.list()
+
+        jadwal.validate()
+        if (jadwal.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [
+                    jadwal: jadwal,
+                    dosen: dosen,
+                    matkul: matkul,
+                    tahunAkademik: tahunAkademik,
+                    ruangan: ruangan
+            ])
+            return
+        } else {
             jadwal.save flush: true, failOnError: true
             redirect(controller: "jadwal", action: "index", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(controller: "jadwal", action: "create", params: [lang: params.lang])
         }
     }
 

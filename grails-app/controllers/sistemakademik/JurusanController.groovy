@@ -15,12 +15,15 @@ class JurusanController {
 
     def save() {
         def jurusan = new Jurusan(params)
-        if (jurusan.validate()) {
+
+        jurusan.validate()
+        if (jurusan.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [jurusan: jurusan])
+            return
+        }else {
             jurusan.save flush:true, failOnError: true
             redirect(controller: "jurusan", action: "index", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(controller: "jurusan", action: "create", params: [lang: params.lang])
         }
     }
 

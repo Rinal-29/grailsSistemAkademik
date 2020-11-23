@@ -27,11 +27,13 @@
             <div class="card-body">
                 <div class="form-group">
                     <label><g:message code="table.field.major"/></label>
-                    <g:textField name="nama" class="form-control" placeholder="${message(code: "placeholder.major")}"/>
+                    <g:textField value="${fieldValue(bean: jurusan , field: "nama")}" name="nama" class="form-control" placeholder="${message(code: "placeholder.major")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${jurusan}" field="nama"/> </span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.faculty"/></label>
-                    <g:textField name="fakultas" class="form-control" placeholder="${message(code: "placeholder.faculty")}"/>
+                    <g:textField value="${fieldValue(bean: jurusan , field: "fakultas")}" name="fakultas" class="form-control" placeholder="${message(code: "placeholder.faculty")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${jurusan}" field="fakultas"/> </span>
                 </div>
                 <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
             </div>

@@ -19,12 +19,16 @@ class RuanganController {
 
     def save() {
         def ruangan = new Ruangan(params)
-        if (ruangan.validate()) {
+        def jurusan = Jurusan.list()
+        def matkul = MataKuliah.list()
+
+        ruangan.validate()
+        if(ruangan.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [ruangan: ruangan,jurusan: jurusan, matkul: matkul])
+        }else {
             ruangan.save flush:true, failOnError: true
             redirect(controller: "ruangan", action: "index", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(controller: "ruangan", action: "create", params: [lang: params.lang])
         }
     }
 

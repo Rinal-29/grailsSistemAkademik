@@ -15,12 +15,16 @@ class MatakuliahController {
 
     def save() {
         def matkul = new MataKuliah(params)
-        if (matkul.validate()) {
+
+        matkul.validate()
+
+        if (matkul.hasErrors()){
+            flash.message = "${message(code: 'input.error')}"
+            render(view: "create", model: [matkul: matkul])
+            return
+        } else {
             matkul.save flush: true, failOnError: true
             redirect(controller: "matakuliah", action: "index", params: [lang: params.lang])
-        } else {
-            flash.message = "${message(code: 'input.error')}"
-            redirect(controller: "matakuliah", action: "create", params: [lang: params.lang])
         }
     }
 

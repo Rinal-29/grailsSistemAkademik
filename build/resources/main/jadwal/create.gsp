@@ -34,7 +34,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label><g:message code="table.filed.courses"/></label>
+         d           <label><g:message code="table.filed.courses"/></label>
                     <select name="mataKuliah" class="custom-select">
                         <g:each in="${matkul}" var="kuliah">
                             <option value="${kuliah.id}">${kuliah.namaMatkul}</option>
@@ -44,10 +44,12 @@
                 <div class="form-group">
                     <label><g:message code="table.filed.day"/></label>
                     <input type="date" name="hari" class="form-control" placeholder="Masukkan hari"/>
+                    <span class="text-danger"><g:renderErrors bean="${jadwal}" field="hari" /></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.time"/></label>
                     <input type="time" name="jam" class="form-control" placeholder="Masukkan jam"/>
+                    <span class="text-danger"><g:renderErrors bean="${jadwal}" field="jam"/> </span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.academic"/></label>

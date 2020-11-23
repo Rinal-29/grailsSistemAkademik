@@ -27,11 +27,13 @@
             <div class="card-body">
                 <div class="form-group">
                     <label><g:message code="table.field.student"/> </label>
-                    <g:textField name="nama" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
+                    <g:textField name="nama" value="${fieldValue(bean: nilai, field: "nama")}" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="nama"/></span>
                 </div>
                 <div class="form-group">
                     <label>Nim</label>
-                    <g:textField name="nim" class="form-control" placeholder="${message(code: "placeholder.nim")}"/>
+                    <g:textField value="${fieldValue(bean: nilai, field: "nim")}" name="nim" class="form-control" placeholder="${message(code: "placeholder.nim")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="nim"/></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>
@@ -43,11 +45,13 @@
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.score.uts"/></label>
-                    <g:textField name="uts" class="form-control" placeholder="${message(code: "placeholder.uts")}"/>
+                    <g:textField value="${fieldValue(bean: nilai, field: "uts")}" name="uts" class="form-control" placeholder="${message(code: "placeholder.uts")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="uts"/></span>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.field.score.uas"/> </label>
-                    <g:textField name="uas" class="form-control" placeholder="${message(code: "placeholder.uas")}"/>
+                    <g:textField value="${fieldValue(bean: nilai, field: "uas")}" name="uas" class="form-control" placeholder="${message(code: "placeholder.uas")}"/>
+                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="uas"/></span>
                 </div>
                 <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
             </div>

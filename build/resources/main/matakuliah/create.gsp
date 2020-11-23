@@ -27,15 +27,18 @@
         <div class="card-body">
             <div class="form-group">
                 <label><g:message code="table.filed.courses"/> </label>
-                <g:textField name="namaMatkul" class="form-control" placeholder="${message(code: "placeholder.courses")}"/>
+                <g:textField value="${fieldValue(bean: matkul, field: "namaMatkul")}" name="namaMatkul" class="form-control" placeholder="${message(code: "placeholder.courses")}"/>
+                <span class="text-danger"><g:renderErrors bean="${matkul}" field="namaMatkul"/></span>
             </div>
             <div class="form-group">
                 <label>SKS</label>
-                <g:textField name="sks" class="form-control" placeholder="${message(code: "placeholder.sks")}"/>
+                <g:textField value="${fieldValue(bean: matkul, field: "sks")}" name="sks" class="form-control" placeholder="${message(code: "placeholder.sks")}"/>
+                <span class="text-danger"><g:renderErrors bean="${matkul}" field="sks" /></span>
             </div>
             <div class="form-group">
                 <label>Semester</label>
-                <g:textField name="semester" class="form-control" placeholder="${message(code: "placeholder.semester")}"/>
+                <g:textField value="${fieldValue(bean: matkul, field: "semester")}" name="semester" class="form-control" placeholder="${message(code: "placeholder.semester")}"/>
+                <span class="text-danger"><g:renderErrors bean="${matkul}" field="semester"/></span>
             </div>
             <g:actionSubmit value="${message(code: "button.add")}" action="save" class="btn btn-primary"/>
         </div>
