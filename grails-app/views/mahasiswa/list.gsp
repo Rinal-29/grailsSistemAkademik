@@ -12,7 +12,7 @@
 <h1 class="mb-3"><g:message code="student.header.name"/> </h1>
 <div class="col-md-12">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header bg-primary">
             <h3 class="card-title"><g:message code="student.table.name"/> </h3>
         </div>
 
@@ -48,7 +48,10 @@
                                     <a href="${createLink(controller: "${params.controller}", action: "edit" , params: [lang: params.lang, id: mhs.id])}" class="btn btn-warning btn-sm">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <g:link action="delete" id="${mhs.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                    <a onclick="return confirm('Delete ?')" href="${createLink(controller: "${params.controller}", action: "delete", params: [lang: params.lang, id: mhs.id])}" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+%{--                                    <g:link action="delete" id="${mhs.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"></g:link>--}%
                                 </td>
                             </sec:ifAllGranted>
                         </tr>

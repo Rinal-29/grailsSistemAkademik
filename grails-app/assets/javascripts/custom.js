@@ -17,15 +17,32 @@ $(document).ready(function () {
             nip: {
                 minlength: 5,
                 required: true
+            },
+            username: {
+                minlength: 5,
+                required: true
+            },
+            email:{
+                required: true,
+                email: true
+            },
+            password: {
+                minlength: 5,
+                required: true
             }
+        },errorPlacement(error, element){
+            $(element).parents('.form-group').append(error);
         },
-        highlight: function (element) {
-            $(element).closest('.control-group').removeClass('success').addClass('error');
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid')
         },
-        success: function (element) {
-            element.text('ok').addClass('valid')
-                .closest('.control-group').removeClass('error').addClass('success');
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid')
+        },
+        messages: {
+            username: {
+                required: "Enter a valid username"
+            }
         }
     });
-
 });

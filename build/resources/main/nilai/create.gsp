@@ -26,14 +26,12 @@
         <g:form action="save" role="form">
             <div class="card-body">
                 <div class="form-group">
-                    <label><g:message code="table.field.student"/> </label>
-                    <g:textField name="nama" value="${fieldValue(bean: nilai, field: "nama")}" class="form-control" placeholder="${message(code: "placeholder.name")}"/>
-                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="nama"/></span>
-                </div>
-                <div class="form-group">
-                    <label>Nim</label>
-                    <g:textField value="${fieldValue(bean: nilai, field: "nim")}" name="nim" class="form-control" placeholder="${message(code: "placeholder.nim")}"/>
-                    <span class="text-danger"><g:renderErrors bean="${nilai}" field="nim"/></span>
+                    <label><g:message code="table.filed.courses"/> </label>
+                    <select name="mahasiswa" class="custom-select">
+                        <g:each in="${mahasiswa}" var="mhs">
+                            <option value="${mhs.id}">${mhs.nama}</option>
+                        </g:each>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label><g:message code="table.filed.courses"/> </label>

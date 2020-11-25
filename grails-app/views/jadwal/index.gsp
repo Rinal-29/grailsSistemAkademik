@@ -11,7 +11,7 @@
     <h1 class="mb-3"><g:message code="schedule.header.name"/></h1>
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-primary">
                 <h3 class="card-title"><g:message code="schedule.table.name"/></h3>
             </div>
             <!-- /.card-header -->
@@ -20,6 +20,7 @@
                     <thead>
                     <tr>
                         <th>No</th>
+                        <th><g:message code="table.field.student"/> </th>
                         <th><g:message code="sidebar.lecture.name"/></th>
                         <th><g:message code="table.filed.courses"/></th>
                         <th><g:message code="table.filed.day"/></th>
@@ -34,7 +35,8 @@
                     <tbody>
                     <g:each in="${listJadwal}" var="jadwal">
                         <tr>
-                            <td class="text-center"></td>
+                            <td class="text-center">1</td>
+                            <td>${jadwal.mahasiswa.nama}</td>
                             <td>${jadwal.dosen.nama}</td>
                             <td>${jadwal.mataKuliah.namaMatkul}</td>
                             <td>${jadwal.hari}</td>

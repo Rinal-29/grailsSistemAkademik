@@ -12,11 +12,13 @@ class JadwalController {
 
     @Secured(["ROLE_ADMIN"])
     def create() {
+        def mahasiswa = Mahasiswa.list()
         def dosen = Dosen.list()
         def matkul = MataKuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()
         [
+                mahasiswa: mahasiswa,
                 dosen: dosen,
                 matkul: matkul,
                 tahunAkademik: tahunAkademik,
@@ -27,6 +29,7 @@ class JadwalController {
     def save() {
         def jadwal = new Jadwal(params)
         def dosen = Dosen.list()
+        def mahasiswa = Mahasiswa.list()
         def matkul = MataKuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()
@@ -35,6 +38,7 @@ class JadwalController {
         if (jadwal.hasErrors()){
             flash.message = "${message(code: 'input.error')}"
             render(view: "create", model: [
+                    mahasiswa: mahasiswa,
                     jadwal: jadwal,
                     dosen: dosen,
                     matkul: matkul,
@@ -51,12 +55,14 @@ class JadwalController {
     @Secured(["ROLE_ADMIN"])
     def edit() {
         def jadwal = Jadwal.get(params.id)
+        def mahasiswa = Mahasiswa.list()
         def dosen = Dosen.list()
         def matkul = MataKuliah.list()
         def tahunAkademik = TahunAkademik.list()
         def ruangan = Ruangan.list()
         [
                 jadwal: jadwal,
+                mahasiswa: mahasiswa,
                 dosen: dosen,
                 matkul: matkul,
                 tahunAkademik: tahunAkademik,

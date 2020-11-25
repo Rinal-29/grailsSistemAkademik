@@ -24,20 +24,24 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Masuk dengan akun anda</p>
-            <g:form action="authenticate" method="post" controller="login">
-                <div class="input-group mb-3">
-                    <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-user"></span>
+            <g:form name="form" action="authenticate" method="post" controller="login">
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <g:textField name="username" type="text" class="form-control" placeholder="Username"/>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="input-group mb-3">
-                    <g:passwordField name="password" type="password" class="form-control" placeholder="Password"/>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <g:passwordField name="password" type="password" class="form-control" placeholder="Password"/>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,6 +69,9 @@
 </g:if>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<asset:javascript src="application.js"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<asset:javascript src="adminlte.min.js"/>
+<asset:javascript src="bootstrap.bundle.min.js"/>
+<asset:javascript src="custom.js"/>
 </body>
 </html>

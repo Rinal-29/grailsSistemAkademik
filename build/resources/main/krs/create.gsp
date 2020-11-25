@@ -1,9 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
   User: fairtech
-  Date: 11/11/20
-  Time: 12.08
+  Date: 24/11/20
+  Time: 12.48
 --%>
+
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -12,9 +13,9 @@
     <meta name="layout" content="main">
 </head>
 <body>
-    <h1 class="mb-3"><g:message code="krs.header.add"/> </h1>
-    <div class="card card-primary col-md-10">
-    <!-- form start -->
+<h1 class="mb-3"><g:message code="krs.header.add"/> </h1>
+<div class="card card-primary col-md-10">
+<!-- form start -->
     <g:form action="save" role="form">
         <div class="card-body">
             <div class="form-group">

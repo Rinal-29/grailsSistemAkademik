@@ -20,6 +20,7 @@
                     <thead>
                     <tr>
                         <th>No</th>
+                        <th><g:message code="table.field.student"/> </th>
                         <th><g:message code="sidebar.lecture.name"/></th>
                         <th><g:message code="table.filed.courses"/></th>
                         <th><g:message code="table.filed.day"/></th>
@@ -34,7 +35,8 @@
                     <tbody>
                     <g:each in="${listJadwal}" var="jadwal">
                         <tr>
-                            <td class="text-center"></td>
+                            <td class="text-center">1</td>
+                            <td>${jadwal.mahasiswa.nama}</td>
                             <td>${jadwal.dosen.nama}</td>
                             <td>${jadwal.mataKuliah.namaMatkul}</td>
                             <td>${jadwal.hari}</td>

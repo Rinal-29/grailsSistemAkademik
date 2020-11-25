@@ -12,7 +12,7 @@
     <h1 class="mb-3"><g:message code="score.header.name"/></h1>
         <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-primary">
                 <h3 class="card-title"><g:message code="score.table.name"/></h3>
             </div>
             <!-- /.card-header -->
@@ -22,7 +22,6 @@
                     <tr>
                         <th>No</th>
                         <th><g:message code="table.field.name"/></th>
-                        <th>Nim</th>
                         <th><g:message code="table.filed.courses"/></th>
                         <th><g:message code="table.filed.score.uts"/></th>
                         <th><g:message code="table.field.score.uas"/></th>
@@ -35,8 +34,7 @@
                     <g:each in="${listNilai}" var="nilaiMhs">
                         <tr>
                             <td class="text-center"></td>
-                            <td>${nilaiMhs.nama}</td>
-                            <td>${nilaiMhs.nim}</td>
+                            <td>${nilaiMhs.mahasiswa.nama}</td>
                             <td>${nilaiMhs.mataKuliah.namaMatkul}</td>
                             <td>${nilaiMhs.uts}</td>
                             <td>${nilaiMhs.uas}</td>

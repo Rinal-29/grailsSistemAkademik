@@ -1,17 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: fairtech
-  Date: 11/11/20
-  Time: 11.58
+  Date: 24/11/20
+  Time: 12.35
 --%>
 <g:render template="/layouts/Header"/>
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-    <h1 class="mb-3"><g:message code="krs.header.name"/> </h1>
+<h1 class="mb-3"><g:message code="krs.header.name"/> </h1>
 <div class="col-md-12">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header bg-primary">
             <h3 class="card-title"><g:message code="krs.table.name"/> </h3>
         </div>
         <!-- /.card-header -->
@@ -48,7 +48,7 @@
                 </tbody>
             </table>
         </div>
-        <!-- /.card-body -->
+    <!-- /.card-body -->
         <sec:ifAllGranted roles="ROLE_ADMIN">
             <div class="card-footer clearfix">
                 <g:link action="create" params="[lang: params.lang]" class="btn btn-primary float-right"><g:message code="krs.button.name"/> </g:link>

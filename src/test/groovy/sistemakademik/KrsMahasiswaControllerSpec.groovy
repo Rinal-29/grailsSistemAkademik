@@ -4,10 +4,10 @@ import grails.test.mixin.TestFor
 import spock.lang.Specification
 
 /**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(Krs)
-class KrsSpec extends Specification {
+@TestFor(KrsController)
+class KrsMahasiswaControllerSpec extends Specification {
 
     def setup() {
     }

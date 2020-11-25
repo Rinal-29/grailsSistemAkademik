@@ -20,6 +20,7 @@
                 <div class="form-group">
                     <label><g:message code="table.field.academic"/> </label>
                     <select name="priode" class="custom-select">
+                        <option value="null"><g:message code="option.choose"/> </option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>

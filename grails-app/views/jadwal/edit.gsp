@@ -19,6 +19,14 @@
         <div class="card-body">
             <div class="form-group">
                 <label><g:message code="sidebar.lecture.name"/></label>
+                <select name="mahasiswa" class="custom-select">
+                    <g:each in="${mahasiswa}" var="mhs">
+                        <option value="${mhs.id}">${mhs.nama}</option>
+                    </g:each>
+                </select>
+            </div>
+            <div class="form-group">
+                <label><g:message code="sidebar.lecture.name"/></label>
                 <select name="dosen" class="custom-select">
                     <g:each in="${dosen}" var="dsn">
                         <option value="${dsn.id}">${dsn.nama}</option>

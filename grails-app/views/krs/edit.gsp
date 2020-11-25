@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: fairtech
-  Date: 11/11/20
-  Time: 12.12
+  Date: 24/11/20
+  Time: 12.50
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <h1 class="mb-3"><g:message code="krs.header.edit"/> </h1>
+<h1 class="mb-3"><g:message code="krs.header.edit"/> </h1>
 <div class="card card-primary col-md-10">
 <!-- form start -->
     <g:form action="update" role="form" id="${krs.id}">

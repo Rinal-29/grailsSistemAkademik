@@ -22,7 +22,6 @@
                     <tr>
                         <th>No</th>
                         <th><g:message code="table.field.name"/></th>
-                        <th>Nim</th>
                         <th><g:message code="table.filed.courses"/></th>
                         <th><g:message code="table.filed.score.uts"/></th>
                         <th><g:message code="table.field.score.uas"/></th>
@@ -35,8 +34,7 @@
                     <g:each in="${listNilai}" var="nilaiMhs">
                         <tr>
                             <td class="text-center"></td>
-                            <td>${nilaiMhs.nama}</td>
-                            <td>${nilaiMhs.nim}</td>
+                            <td>${nilaiMhs.mahasiswa.nama}</td>
                             <td>${nilaiMhs.mataKuliah.namaMatkul}</td>
                             <td>${nilaiMhs.uts}</td>
                             <td>${nilaiMhs.uas}</td>

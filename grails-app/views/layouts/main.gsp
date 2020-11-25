@@ -65,11 +65,9 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <span class="dropdown-item dropdown-header">Menu</span>
                 <div class="dropdown-divider"></div>
-                <sec:ifAllGranted roles="ROLE_ADMIN">
-                    <a href="${createLink(controller: "user", action: "index", params: [lang: params.lang ?: null])}" class="dropdown-item">
-                        <i class="nav-icon fas fa-user"></i> <g:message code="sidebar.account.name"/>
-                    </a>
-                </sec:ifAllGranted>
+                <a href="${createLink(controller: "user", action: "index", params: [lang: params.lang ?: null])}" class="dropdown-item">
+                    <i class="nav-icon fas fa-user"></i> <g:message code="sidebar.account.name"/>
+                </a>
                 <div class="dropdown-divider"></div>
                 <sec:ifLoggedIn>
                     <g:link controller="logout" class="dropdown-item bg-red">
@@ -96,10 +94,11 @@
         <div class="sidebar">
             <!-- Sidebar Menu -->
 
+        <sec:ifAllGranted roles="ROLE_ADMIN">
             <nav class="mt-2" id="myTab">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+           with font-awesome or any other icon font library -->
                     <li class="nav-item">
                         <a href="${createLink(controller: 'dashboard',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
@@ -180,26 +179,75 @@
                             </p>
                         </a>
                     </li>
-                    <sec:ifAllGranted roles="ROLE_ADMIN">
-                        <li class="nav-item">
-                            <a href="${createLink(controller: 'tahunAkademik',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
-                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                <p>
-                                    <g:message code="sidebar.year.name"/>
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="${createLink(controller: 'user',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    <g:message code="sidebar.account.name"/>
-                                </p>
-                            </a>
-                        </li>
-                    </sec:ifAllGranted>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'tahunAkademik',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-calendar-alt"></i>
+                            <p>
+                                <g:message code="sidebar.year.name"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'user',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                <g:message code="sidebar.account.name"/>
+                            </p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
+        </sec:ifAllGranted>
+
+        <sec:ifAllGranted roles="ROLE_USER">
+            <nav class="mt-2" id="myTab">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'dashboard',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-columns"></i>
+                            <p>
+                                <g:message code="sidebar.dashboard.name"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'krsMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-clipboard"></i>
+                            <p>
+                                <g:message code="sidebar.krs.name"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'khsMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-book-reader"></i>
+                            <p>
+                                <g:message code="sidebar.score.name"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'jadwalMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-clipboard-list"></i>
+                            <p>
+                                <g:message code="sidebar.schedule.name"/>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${createLink(controller: 'userMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>
+                                <g:message code="sidebar.account.name"/>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </sec:ifAllGranted>
+
             <!-- /.sidebar-menu -->
         </div>
         <!-- /.sidebar -->

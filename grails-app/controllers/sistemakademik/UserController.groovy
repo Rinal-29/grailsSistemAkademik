@@ -5,7 +5,7 @@ import sistemakademik.auth.Role
 import sistemakademik.auth.User
 import sistemakademik.auth.UserRole
 
-@Secured(["ROLE_ADMIN"])
+@Secured(["ROLE_ADMIN", "ROLE_USER"])
 class UserController {
 
     def index() {
