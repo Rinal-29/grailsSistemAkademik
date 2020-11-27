@@ -26,5 +26,6 @@ reserved.
 <asset:javascript src="bootstrap.bundle.min.js"/>
 <asset:javascript src="script.js"/>
 <asset:javascript src="custom.js"/>
+
 </body>
 </html>

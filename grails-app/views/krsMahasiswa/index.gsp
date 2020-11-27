@@ -16,52 +16,41 @@
             <h3 class="card-title"><g:message code="krs.table.name"/> </h3>
         </div>
         <!-- /.card-header -->
-        <div class="card-body">
-            <table id="myTable" class="table table-bordered display">
-                <thead>
-                <tr>
-                    <th>No</th>
-                    <th><g:message code="table.filed.courses"/> </th>
-                    <th>SKS</th>
-                    <th>Semester</th>
-                    <th><g:message code="table.field.academic"/> </th>
-                </tr>
-                </thead>
-                <tbody>
-                <g:each in="${listKrs}" var="krs">
+        <form method="post" action="#" id="printJs-form">
+            <div class="card-body">
+                <table id="myTable" class="table table-bordered display">
+                    <thead>
                     <tr>
-                        <td class="text-center">1</td>
-                        <td>${krs.mataKuliah.namaMatkul}</td>
-                        <td>${krs.mataKuliah.sks}</td>
-                        <td>${krs.mataKuliah.semester}</td>
-                        <td>${krs.tahunAkademik.priode}</td>
+                        <th>No</th>
+                        <th><g:message code="table.filed.courses"/> </th>
+                        <th>SKS</th>
+                        <th>Semester</th>
                     </tr>
-                </g:each>
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                    <g:each in="${listKrs}" var="krs">
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>${krs.mataKuliah.namaMatkul}</td>
+                            <td class="krsValue">${krs.mataKuliah.sks}</td>
+                            <td>${krs.mataKuliah.semester}</td>
+                        </tr>
+                    </g:each>
+                    </tbody>
+                </table>
+                <span class="matkulTot"><strong>Jumlah Matakuliah yang dipilih = </strong></span> <span><strong class="matkulSksNum">0</strong></span>
+                <br>
+                <span class="sksTot"><strong>Jumlah SKS yang diprogramkan = </strong></span> <span><strong class="krsSksNum">0</strong></span>
+                <br>
+            </div>
+        </form>
         <!-- /.card-body -->
         <div class="card-footer clearfix">
-            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalLong">
-                Tambah
+            <g:link action="create" params="[lang: params.lang]" class="btn btn-primary float-right">Tambah</g:link>
+            <g:link action="edit" params="[lang: params.lang]" class="btn btn-warning float-right mr-3">Edit KRS</g:link>
+            <button class="btn btn-success float-right mr-3" type="button" onclick="printJS('printJs-form', 'html')">
+                Print Form
             </button>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Tambah Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
         </div>
     </div>
 </div>

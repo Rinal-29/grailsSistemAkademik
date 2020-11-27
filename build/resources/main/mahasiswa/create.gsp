@@ -50,6 +50,7 @@
                     <div class="form-group">
                         <label><g:message code="table.field.major"/> </label>
                         <select name="jurusan" class="custom-select">
+                            <option value="null"><g:message code="option.choose"/></option>
                             <g:each in="${jurusan}" var="jur">
                                 <option value=${jur.id}>${jur.nama}</option>
                             </g:each>
@@ -60,5 +61,6 @@
                 <!-- /.card-body -->
             </g:form>
         </div>
+
 
 <g:render template="/layouts/Footer"/>

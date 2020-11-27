@@ -127,7 +127,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${createLink(controller: 'krs',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                        <a href="${createLink(controller: 'krsMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-clipboard"></i>
                             <p>
                                 <g:message code="sidebar.krs.name"/>
@@ -135,7 +135,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${createLink(controller: 'nilai',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                        <a href="${createLink(controller: 'khsMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-book-reader"></i>
                             <p>
                                 <g:message code="sidebar.score.name"/>
@@ -143,7 +143,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${createLink(controller: 'jadwal',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                        <a href="${createLink(controller: 'jadwalMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-clipboard-list"></i>
                             <p>
                                 <g:message code="sidebar.schedule.name"/>
@@ -151,7 +151,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="${createLink(controller: 'user',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
+                        <a href="${createLink(controller: 'userMahasiswa',action: 'index', params: [lang: params.lang ?: null])}" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
                                 <g:message code="sidebar.account.name"/>

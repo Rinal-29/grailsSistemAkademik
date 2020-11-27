@@ -11,7 +11,7 @@
 <h1 class="mb-3"><g:message code="krs.header.name"/> </h1>
 <div class="col-md-12">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header bg-primary">
             <h3 class="card-title"><g:message code="krs.table.name"/> </h3>
         </div>
         <!-- /.card-header -->
