@@ -9,7 +9,7 @@
 <g:render template="/layouts/Navbar"/>
 <g:render template="/layouts/Sidebar"/>
 
-<h1 class="mb-3">Daftar Matakuliah</h1>
+<h1 class="mb-3"><g:message code="courses.header.name"/> </h1>
 <g:if test="${flash.message}">
     <div class="alert alert-warning alert-dismissible fade show col-md-12" role="alert">
         <div class="message">${flash.message}</div>
@@ -23,7 +23,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title mr-3">Daftar Mata Kuliah</h3>
+            <h3 class="card-title mr-3"><g:message code="courses.header.name"/> </h3>
             <div class="float-right form-inline">
                 <g:form action="create">
                     <select name="semester" class="semester-select custom-select mr-3">
@@ -37,6 +37,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
+            <h4 class="text-bold text-center">Form KRS</h4>
             <table id="myTable" class="table table-bordered display">
                 <thead>
                 <tr>
@@ -44,7 +45,7 @@
                     <th><g:message code="table.filed.courses"/> </th>
                     <th>SKS</th>
                     <th>Semester</th>
-                    <th>Aksi</th>
+                    <th>Pilih Matakuliah</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -69,7 +70,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:actionSubmit value="Validasi" action="save" class="btn btn-primary float-right"/>
+                <g:actionSubmit onClick="return confirm('${message(code: "message.validation")}')" value="${message(code: "button.validation")}" action="save" class="btn btn-primary float-right"/>
             </div>
     </div>
 </div>

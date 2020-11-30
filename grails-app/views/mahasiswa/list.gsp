@@ -48,7 +48,7 @@
                                     <a href="${createLink(controller: "${params.controller}", action: "edit" , params: [lang: params.lang, id: mhs.id])}" class="btn btn-warning btn-sm">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <a onclick="return confirm('Delete ?')" href="${createLink(controller: "${params.controller}", action: "delete", params: [lang: params.lang, id: mhs.id])}" class="btn btn-danger btn-sm">
+                                    <a onclick="return confirm('${message(code: "message.delete")}')" href="${createLink(controller: "${params.controller}", action: "delete", params: [lang: params.lang, id: mhs.id])}" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash"></i>
                                     </a>
 %{--                                    <g:link action="delete" id="${mhs.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"></g:link>--}%

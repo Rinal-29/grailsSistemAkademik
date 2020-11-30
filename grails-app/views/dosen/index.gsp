@@ -43,7 +43,7 @@
                                 <a href="${createLink(controller: "dosen", action: "edit", params: [lang: params.lang, id: dosen.id])}" class="btn btn-success btn-sm">
                                     <i class="far fa-edit"></i>
                                 </a>
-                                <g:link action="delete" id="${dosen.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                <g:link onClick="return confirm('${message(code: "message.delete")}')" action="delete" id="${dosen.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </sec:ifAllGranted>
                     </tr>

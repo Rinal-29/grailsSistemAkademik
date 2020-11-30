@@ -20,6 +20,7 @@ class KrsMahasiswaController {
         if (matkulSemester.isEmpty()){
             [listMatkul:matkul]
         } else  {
+            flash.message = "Semester diganti ke semester " + params.semester
             [listMatkul: matkulSemester]
         }
     }
@@ -34,13 +35,12 @@ class KrsMahasiswaController {
                     mataKuliah: MataKuliah.findById(item)
             )
             if (KrsMahasiswa.findByMataKuliah(krsMhs.mataKuliah)){
-                flash.message = "Matakuliah telah ada";
+                flash.message = "${message(code: "error.krs")}"
                 redirect action: "create", controller: "krsMahasiswa", params:[lang: params.lang]
                 return
             }
             krsMhs.save flush: true, failOnError: true
         }
-
         redirect action: "index", controller: "krsMahasiswa", params:[lang: params.lang]
     }
 

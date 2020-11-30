@@ -258,7 +258,7 @@
 
                         <hr>
 
-                        <strong><i class="fas fa-pencil-alt mr-1"></i> Tanggal Lahir</strong>
+                        <strong><i class="fas fa-calendar-alt mr-1"></i> Tanggal Lahir</strong>
 
                         <p class="text-muted">
                             ${mhs.tanggalLahir}
@@ -266,13 +266,13 @@
 
                         <hr>
 
-                        <strong><i class="fas fa-university mr-1"></i> No Telephone</strong>
+                        <strong><i class="fas fa-phone-alt mr-1"></i> No Telephone</strong>
 
                         <p class="text-muted">${mhs.noTelp}</p>
 
                         <hr>
 
-                        <strong><i class="far fa-file-alt mr-1"></i> Jurusan</strong>
+                        <strong><i class="fas fa-university mr-1"></i> Jurusan</strong>
 
                         <p class="text-muted">${mhs.jurusan.nama}</p>
                     </div>
@@ -324,7 +324,7 @@
                                         </g:each>
                                     </select>
                                 </div>
-                                <g:actionSubmit value="${message(code: "button.update")}" action="update" class="btn btn-primary float-right" />
+                                <g:actionSubmit value="${message(code: "button.update")}" onClick="return confirm('${message(code: "message.update")}')" action="update" class="btn btn-primary float-right" />
                             </div>
                             <!-- /.card-body -->
                         </g:form>

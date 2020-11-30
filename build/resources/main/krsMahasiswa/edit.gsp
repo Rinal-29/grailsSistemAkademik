@@ -17,6 +17,7 @@
         </div>
         <!-- /.card-header -->
     <div class="card-body">
+        <h4 class="text-center mb-3 text-bold">Daftar KRS yang Telah Dipilih</h4>
         <g:form action="save">
             <table id="myTable" class="table table-bordered display">
                 <thead>
@@ -24,7 +25,8 @@
                     <th>No</th>
                     <th><g:message code="table.filed.courses"/> </th>
                     <th>SKS</th>
-                    <th>Aksi</th>
+                    <th>Semester</th>
+                    <th><g:message code="table.field.action"/> </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,8 +35,10 @@
                         <td class="text-center">1</td>
                         <td>${matkul.mataKuliah.namaMatkul}</td>
                         <td class="rowSks">${matkul.mataKuliah.sks}</td>
-                        <td>
-                            <input checked class="sks" type="checkbox" name="mataKuliah" value="${matkul.mataKuliah.id}" data-sks="${matkul.mataKuliah.sks}">
+                        <td>${matkul.mataKuliah.semester}</td>
+                        <td class="text-center">
+                            <g:link onclick="return confirm('${message(code: "message.delete")}')" action="delete" id="${matkul.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                            <input hidden checked class="sks" type="checkbox" name="mataKuliah" value="${matkul.mataKuliah.id}" data-sks="${matkul.mataKuliah.sks}">
                         </td>
                     </tr>
                 </g:each>
@@ -48,7 +52,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer clearfix">
-                <g:actionSubmit value="Validasi" action="" class="btn btn-primary float-right"/>
+                <g:actionSubmit value="Validasi" action="index" class="btn btn-primary float-right"/>
             </div>
         </g:form>
     </div>

@@ -46,8 +46,13 @@ $(document).ready( function () {
 
     function numberTable() {
         let lengthTable = $('#myTable tbody tr' ).length;
-        if (lengthTable > 1){
+        let lengthTableKrs = $('#tableKrs tbody tr').length;
+        if (lengthTable > 1 || lengthTableKrs){
             $('#myTable tbody tr').each(function (index) {
+                $(this).children("td:eq(0)").html(index + 1);
+            });
+
+            $('#tableKrs tbody tr').each(function (index) {
                 $(this).children("td:eq(0)").html(index + 1);
             });
         }
@@ -70,13 +75,11 @@ $(document).ready( function () {
             let sks = parseInt($(this).text());
             total += sks
         })
-        let lengthMatkul = $('#myTable tbody tr' ).length;
+        let lengthMatkul = $('#tableKrs tbody tr' ).length;
         $('.krsSksNum').text(total);
         $('.matkulSksNum').text(lengthMatkul);
     }
 } );
-
-
 
 
 // matkul.click(function (){

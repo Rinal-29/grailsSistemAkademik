@@ -39,7 +39,7 @@
                         <sec:ifAllGranted roles="ROLE_ADMIN">
                             <td class="text-center">
                                 <g:link action="edit" params="[lang: params.lang]" id="${matkul.id}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${matkul.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                <g:link action="delete" onClick="return confirm('${message(code: "message.delete")}')" id="${matkul.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </sec:ifAllGranted>
                     </tr>
