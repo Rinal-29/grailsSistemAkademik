@@ -27,7 +27,7 @@ class UrlMappings {
         "/$lang?/matakuliah/$action?"(controller: "matakuliah")
         "/$lang?/ruangan/$action?"(controller: "ruangan")
         "/$lang?/jurusan/$action?"(controller: "jurusan")
-        "/$lang?/penasehatAkademik/$action?"(controller: "penasehatAkademik")
+        "/$lang?/penasehatAkademik/$action?/$id?"(controller: "penasehatAkademik")
         "/$lang?/jadwal/$action?"(controller: "jadwal")
         "/$lang?/nilai/$action?"(controller: "nilai")
         "/$lang?/krs/$action?"(controller: "krs")

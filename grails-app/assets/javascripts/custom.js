@@ -37,7 +37,7 @@ $(document).ready(function () {
             $(element).addClass('is-invalid')
         },
         unhighlight: function (element, errorClass, validClass) {
-            $(element).removeClass('is-invalid')
+            $(element).removeClass('is-invalid').addClass('is-valid')
         },
         messages: {
             username: {

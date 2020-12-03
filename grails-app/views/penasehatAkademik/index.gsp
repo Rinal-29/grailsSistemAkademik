@@ -11,6 +11,14 @@
 
     <h1 class="mb-3"><g:message code="advisor.header.name"/> </h1>
     <div class="col-md-12">
+    <g:if test="${flash.message}">
+        <div class="alert alert-warning alert-dismissible fade show col-md-10" role="alert">
+            <div class="message">${flash.message}</div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </g:if>
     <div class="card">
         <div class="card-header bg-primary">
             <h3 class="card-title"><g:message code="advisor.table.name"/></h3>
@@ -32,14 +40,14 @@
                 <tbody>
                 <g:each in="${penasehat}" var="pa">
                     <tr>
-                        <td class="text-center"></td>
+                        <td class="text-center">1</td>
                         <td>${pa.mahasiswa.nama}</td>
                         <td>${pa.dosen.nama}</td>
                         <td>${pa.tahunAkademik.priode}</td>
                         <sec:ifAllGranted roles="ROLE_ADMIN">
                             <td class="text-center">
                                 <g:link action="edit"  id="${pa.id}" params="[lang: params.lang]" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${pa.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                <g:link action="delete" onClick="return confirm('${message(code: "message.delete")}')" id="${pa.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </sec:ifAllGranted>
                     </tr>

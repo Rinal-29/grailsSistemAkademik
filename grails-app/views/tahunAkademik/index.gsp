@@ -33,7 +33,7 @@
                             <td>${ta.priode}</td>
                             <td class="text-center">
                                 <g:link action="edit"  id="${ta.id}" params="[lang:params.lang]" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></g:link>
-                                <g:link action="delete" id="${ta.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
+                                <g:link onClick="return confirm('${message(code: "message.delete")}')" action="delete" id="${ta.id}" params="[lang: params.lang]" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></g:link>
                             </td>
                         </tr>
                     </g:each>

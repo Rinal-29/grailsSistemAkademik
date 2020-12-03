@@ -52,6 +52,12 @@ class PenasehatAkademikController {
     @Secured(["ROLE_ADMIN"])
     def delete() {
         def penasehat = PenasehatAkademik.get(params.id)
-        penasehat.delete()
+        if (penasehat.validate()){
+            penasehat.delete()
+            redirect(controller: "penasehatAkademik", action: "index", params: [lang: params.lang])
+        } else {
+            flash.message = "cannot delete"
+            redirect(controller: "penasehatAkademik", action: "index", params: [lang: params.lang])
+        }
     }
 }
