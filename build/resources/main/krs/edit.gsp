@@ -50,7 +50,7 @@
                     </g:each>
                 </select>
             </div>
-            <g:actionSubmit value="${message(code: "button.update")}" class="btn btn-primary"/>
+            <g:actionSubmit onClick="return confirm('${message(code: "message.update")}')" value="${message(code: "button.update")}" class="btn btn-primary"/>
         </div>
         <!-- /.card-body -->
     </g:form>

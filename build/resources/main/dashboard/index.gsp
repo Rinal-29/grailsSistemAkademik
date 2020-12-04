@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <h1 class="mb-2"><g:message code="header.dashboard.name"/> </h1>
     <sec:ifLoggedIn>
         <h5 class="mb-5"><g:message code="header.welcome.name"/>, <sec:username/></h5>
