@@ -14,4 +14,6 @@ class JadwalMahasiswaController {
         def jadwal = Jadwal.findAllByMahasiswa(mhs)
         [jadwalMhs: jadwal]
     }
+
+
 }
