@@ -19,7 +19,7 @@
 </g:if>
 <div class="card card-primary col-md-10">
 <!-- form start -->
-    <g:form action="save" role="form" id="${user.id}">
+    <g:form name="form" action="save" role="form" id="${user.id}">
         <div class="card-body">
             <div class="form-group">
                 <label>Username</label>

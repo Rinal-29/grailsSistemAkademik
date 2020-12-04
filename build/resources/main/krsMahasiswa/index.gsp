@@ -18,7 +18,7 @@
         <!-- /.card-header -->
         <form method="post" action="#" id="printJs-form">
             <div class="card-body">
-                <h4 class="text-center mb-3 text-bold">Daftar KRS yang Telah Dipilih</h4>
+                <h4 class="text-center mb-3 text-bold"><g:message code="header.table"/> </h4>
 %{--                <p class="text-center text-bold text-uppercase">Semester ${listKrs.get(0).mataKuliah.semester}</p>--}%
                 <table id="tableKrs" class="table table-bordered display mb-3">
                     <thead>

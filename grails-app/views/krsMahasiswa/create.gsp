@@ -27,17 +27,17 @@
             <div class="float-right form-inline">
                 <g:form action="create">
                     <select name="semester" class="semester-select custom-select mr-3">
-                        <option value="null">Pilih Semester</option>
-                        <option value="ganjil">Semester Ganjil</option>
-                        <option value="genap">Semester Genap</option>
+                        <option value="null"><g:message code="semester.chose"/> </option>
+                        <option value="ganjil"><g:message code="semester.odd"/> </option>
+                        <option value="genap"><g:message code="semester.even"/> </option>
                     </select>
-                    <g:actionSubmit value="Submit" action="create" class="btn btn-outline-primary float-right"/>
+                    <g:actionSubmit value="${message(code: "button.choose")}" action="create" class="btn btn-outline-primary float-right"/>
                 </g:form>
             </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <h4 class="text-bold text-center">Form KRS</h4>
+            <h4 class="text-bold text-center"><g:message code="header.table.krs"/></h4>
             <table id="myTable" class="table table-bordered display">
                 <thead>
                 <tr>
@@ -62,9 +62,9 @@
                 </g:each>
                 </tbody>
             </table>
-            <span class="matkulTot"><strong>Jumlah Matakuliah yang dipilih = </strong></span> <span><strong class="matkulNum">0</strong></span>
+            <span class="matkulTot"><strong><g:message code="total.course"/> = </strong></span> <span><strong class="matkulNum">0</strong></span>
             <br>
-            <span class="sksTot"><strong>Jumlah SKS yang diprogramkan = </strong></span> <span><strong class="sksNum">0</strong></span>
+            <span class="sksTot"><strong><g:message code="total.sks"/> = </strong></span> <span><strong class="sksNum">0</strong></span>
             <br>
             <span class="sksError text-danger"></span>
             </div>

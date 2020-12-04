@@ -44,9 +44,9 @@
                 </g:each>
                 </tbody>
             </table>
-            <span class="matkulTot"><strong>Jumlah Matakuliah yang dipilih = </strong></span> <span><strong class="matkulNum">0</strong></span>
+            <span class="matkulTot"><strong><g:message code="total.course"/> = </strong></span> <span><strong class="matkulNum">0</strong></span>
             <br>
-            <span class="sksTot"><strong>Jumlah SKS yang diprogramkan = </strong></span> <span><strong class="sksNum">0</strong></span>
+            <span class="sksTot"><strong><g:message code="total.sks"/> = </strong></span> <span><strong class="sksNum">0</strong></span>
             <br>
             <span class="sksError text-danger"></span>
             </div>
